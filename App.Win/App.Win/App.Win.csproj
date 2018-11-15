@@ -1,0 +1,2594 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{63707798-06EE-43CC-97FE-E7F131F8EE6E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>InfinityChess</RootNamespace>
+    <AssemblyName>InfinityChess</AssemblyName>
+    <SccProjectName>"%24/Projects/InfiChess/App.Win", AVDAAAAA</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ApplicationIcon>main.ico</ApplicationIcon>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <StartupObject>InfinityChess.Program</StartupObject>
+    <PublishUrl>http://localhost/InfinityChess/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Common\AxInterop.ShockwaveFlashObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.ShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Common\Interop.ShockwaveFlashObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="Khendys.Controls.ExRichTextBox, Version=1.0.3770.28620, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Common\Khendys.Controls.ExRichTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft.NET\Primary Interop Assemblies\Microsoft.mshtml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\WindowsFormsIntegration\3.0.0.0__31bf3856ad364e35\WindowsFormsIntegration.dll</HintPath>
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Forms\ProgressForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Forms\ProgressForm.Designer.cs">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Forms\DevForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Forms\DevForm.Designer.cs">
+      <DependentUpon>DevForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Forms\MainForm.Notation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Forms\MainForm.ChessBoardCtrl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Forms\MainForm.Docking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Forms\TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Forms\TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Uc\FilterUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\Uc\FilterUc.Designer.cs">
+      <DependentUpon>FilterUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Kv\PrintGameDataSet.cs">
+      <DependentUpon>PrintGameDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\Kv\PrintGameDataSet.Designer.cs">
+      <DependentUpon>PrintGameDataSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Kv\PrintGameDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintGameDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Kv\Tournament.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tournament.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\ChangeWeightPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\ChangeWeightPopup.Designer.cs">
+      <DependentUpon>ChangeWeightPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\ConvertFilesPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\ConvertFilesPopup.designer.cs">
+      <DependentUpon>ConvertFilesPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\GameSearch\GameSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\GameSearch\GameSearch.Designer.cs">
+      <DependentUpon>GameSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\GameSearch\GameSearchProgress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\GameSearch\GameSearchProgress.Designer.cs">
+      <DependentUpon>GameSearchProgress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\GameSearch\WaitingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\GameSearch\WaitingForm.Designer.cs">
+      <DependentUpon>WaitingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\MainOffline.Notations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\EngineParametersPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\EngineParametersPopup.Designer.cs">
+      <DependentUpon>EngineParametersPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\frmGotoLineNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\frmGotoLineNumber.Designer.cs">
+      <DependentUpon>frmGotoLineNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\MainOffline.Docking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\MainOffline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\MainOffline.Designer.cs">
+      <DependentUpon>MainOffline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\AboutCheckMate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\AboutCheckMate.designer.cs">
+      <DependentUpon>AboutCheckMate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\BookOptionsPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\BookOptionsPopup.Designer.cs">
+      <DependentUpon>BookOptionsPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\ImportGameEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\ImportGameEditor.Designer.cs">
+      <DependentUpon>ImportGameEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\GameReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\GameReport.Designer.cs">
+      <DependentUpon>GameReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Model\Clipboard\Clipboard.cs" />
+    <Compile Include="Offline\Model\Kibitzer\KibitzerManager.cs" />
+    <Compile Include="Offline\Model\Settings\ThemeSetting.Designer.cs">
+      <DependentUpon>ThemeSetting.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Offline\Model\Theme\ThemeClass.cs" />
+    <Compile Include="Offline\Model\TournamentManager\Tournament.cs" />
+    <Compile Include="Offline\Uc\BookUc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Uc\BookUc.Designer.cs">
+      <DependentUpon>BookUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Uc\BookUc.MoveTo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Uc\CapturePieceUc.MoveTo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\Uc\DevUc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Uc\DevUc.Designer.cs">
+      <DependentUpon>DevUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Uc\AnalysisUc.Analysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Uc\E2eResultUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Offline\Uc\E2eResultUc.Designer.cs">
+      <DependentUpon>E2eResultUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Uc\NotationUc.MoveTo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Uc\PositionSetupUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Offline\Uc\PositionSetupUc.Designer.cs">
+      <DependentUpon>PositionSetupUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Uc\ScoringUc.MoveTo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Uc\GameInfoUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Offline\Uc\GameInfoUc.Designer.cs">
+      <DependentUpon>GameInfoUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Uc\NotationUc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Uc\NotationUc.Designer.cs">
+      <DependentUpon>NotationUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Uc\ScoringUc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Uc\ScoringUc.Designer.cs">
+      <DependentUpon>ScoringUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\AvPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\AvPlayer.Designer.cs">
+      <DependentUpon>AvPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\BrowserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\BrowserForm.Designer.cs">
+      <DependentUpon>BrowserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\ChallengeWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\ChallengeWindow.Designer.cs">
+      <DependentUpon>ChallengeWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\BanUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\BanUserForm.Designer.cs">
+      <DependentUpon>BanUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\CheckoutAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\CheckoutAccount.Designer.cs">
+      <DependentUpon>CheckoutAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\BlockedIPDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\BlockedIPDetail.Designer.cs">
+      <DependentUpon>BlockedIPDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\SetupMatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\SetupMatch.Designer.cs">
+      <DependentUpon>SetupMatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\IPList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\IPList.Designer.cs">
+      <DependentUpon>IPList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\LogList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\LogList.Designer.cs">
+      <DependentUpon>LogList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\StandingsUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\StandingsUc.Designer.cs">
+      <DependentUpon>StandingsUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\SwissResultsUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\SwissResultsUc.Designer.cs">
+      <DependentUpon>SwissResultsUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\ScheveningenResultsUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\ScheveningenResultsUc.Designer.cs">
+      <DependentUpon>ScheveningenResultsUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\RoundRobinResultsUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\RoundRobinResultsUc.Designer.cs">
+      <DependentUpon>RoundRobinResultsUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\KnockOutResultsUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\KnockOutResultsUc.Designer.cs">
+      <DependentUpon>KnockOutResultsUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\NotationViewerUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\NotationViewerUc.Designer.cs">
+      <DependentUpon>NotationViewerUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\MatchEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\MatchEditor.Designer.cs">
+      <DependentUpon>MatchEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\RoomDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\RoomDetail.Designer.cs">
+      <DependentUpon>RoomDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\NewsDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\NewsDetail.Designer.cs">
+      <DependentUpon>NewsDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\NewsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\NewsList.Designer.cs">
+      <DependentUpon>NewsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\EnterMoveText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\EnterMoveText.Designer.cs">
+      <DependentUpon>EnterMoveText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\ForgotPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\ForgotPasswordForm.Designer.cs">
+      <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\OnlineClient.Docking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\MainOnline.Docking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\MainOnline.Menu.Events.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\MainOnline.Game.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\RankInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\RankInfo.Designer.cs">
+      <DependentUpon>RankInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\RoomList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\RoomList.Designer.cs">
+      <DependentUpon>RoomList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\SchRegisterTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\SchRegisterTeam.Designer.cs">
+      <DependentUpon>SchRegisterTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\SeekWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\SeekWindow.Designer.cs">
+      <DependentUpon>SeekWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\EloDistribution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\EloDistribution.Designer.cs">
+      <DependentUpon>EloDistribution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\MainOnline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\MainOnline.Designer.cs">
+      <DependentUpon>MainOnline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\PersonalInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\PersonalInformation.Designer.cs">
+      <DependentUpon>PersonalInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\Formula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\Formula.Designer.cs">
+      <DependentUpon>Formula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\PlayingMode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\PlayingMode.Designer.cs">
+      <DependentUpon>PlayingMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\RatedGameResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\RatedGameResult.Designer.cs">
+      <DependentUpon>RatedGameResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\SearchPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\SearchPlayer.Designer.cs">
+      <DependentUpon>SearchPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\SearchTitledPlayers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\SearchTitledPlayers.Designer.cs">
+      <DependentUpon>SearchTitledPlayers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\SendMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\SendMessage.Designer.cs">
+      <DependentUpon>SendMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\ServerStatistic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\ServerStatistic.Designer.cs">
+      <DependentUpon>ServerStatistic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\ServerTimeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\ServerTimeForm.Designer.cs">
+      <DependentUpon>ServerTimeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\TeamDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\TeamDetail.Designer.cs">
+      <DependentUpon>TeamDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\TeamList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\TeamList.Designer.cs">
+      <DependentUpon>TeamList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\TournamentDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\TournamentDetail.Designer.cs">
+      <DependentUpon>TournamentDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\TournamentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\TournamentList.Designer.cs">
+      <DependentUpon>TournamentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\TournamentRegisterPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\TournamentRegisterPlayer.Designer.cs">
+      <DependentUpon>TournamentRegisterPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\BlockedIPDetailUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\BlockedIPDetailUc.Designer.cs">
+      <DependentUpon>BlockedIPDetailUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\SetupMatchUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\SetupMatchUc.Designer.cs">
+      <DependentUpon>SetupMatchUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\IPListUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\IPListUc.Designer.cs">
+      <DependentUpon>IPListUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\LogListUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\LogListUc.Designer.cs">
+      <DependentUpon>LogListUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\MatchEditorUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\MatchEditorUc.Designer.cs">
+      <DependentUpon>MatchEditorUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\RoomDetailUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\RoomDetailUc.Designer.cs">
+      <DependentUpon>RoomDetailUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\RoomListUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\RoomListUc.Designer.cs">
+      <DependentUpon>RoomListUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\SchRegisterTeamUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\SchRegisterTeamUc.Designer.cs">
+      <DependentUpon>SchRegisterTeamUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\SchTeamUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\SchTeamUc.designer.cs">
+      <DependentUpon>SchTeamUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\TeamDetailUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\TeamDetailUc.Designer.cs">
+      <DependentUpon>TeamDetailUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\TeamListUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\TeamListUc.Designer.cs">
+      <DependentUpon>TeamListUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\TournamentListUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\TournamentListUc.Designer.cs">
+      <DependentUpon>TournamentListUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\UpdateClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\UpdateClient.Designer.cs">
+      <DependentUpon>UpdateClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\UserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\UserList.Designer.cs">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\UserStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\UserStatus.Designer.cs">
+      <DependentUpon>UserStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\UserTopRatingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\UserTopRatingForm.Designer.cs">
+      <DependentUpon>UserTopRatingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Model\Srv\Srv.cs" />
+    <Compile Include="Online\Uc\AudienceUc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\AudienceUc.Designer.cs">
+      <DependentUpon>AudienceUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\AvClientUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\AvClientUc.designer.cs">
+      <DependentUpon>AvClientUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\BrowserUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\BrowserUc.Designer.cs">
+      <DependentUpon>BrowserUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\BanUserUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\BanUserUc.Designer.cs">
+      <DependentUpon>BanUserUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\CheckoutAccountUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\CheckoutAccountUc.Designer.cs">
+      <DependentUpon>CheckoutAccountUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\TournamentMatchesUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\TournamentMatchesUc.Designer.cs">
+      <DependentUpon>TournamentMatchesUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\NewsDetailUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\NewsDetailUc.Designer.cs">
+      <DependentUpon>NewsDetailUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\NewsListUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\NewsListUc.Designer.cs">
+      <DependentUpon>NewsListUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\PrizeUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\PrizeUc.Designer.cs">
+      <DependentUpon>PrizeUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\RegisteredPlayerUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\RegisteredPlayerUc.Designer.cs">
+      <DependentUpon>RegisteredPlayerUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\RegisterPlayerUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\RegisterPlayerUc.Designer.cs">
+      <DependentUpon>RegisterPlayerUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\ResultsUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\ResultsUc.Designer.cs">
+      <DependentUpon>ResultsUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\TeamUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\TeamUc.Designer.cs">
+      <DependentUpon>TeamUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\TournamentDetailUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\TournamentDetailUc.Designer.cs">
+      <DependentUpon>TournamentDetailUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\TournamentUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\TournamentUc.Designer.cs">
+      <DependentUpon>TournamentUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\TournamentViewUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\TournamentViewUc.Designer.cs">
+      <DependentUpon>TournamentViewUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\UserFiniUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\UserFiniUc.Designer.cs">
+      <DependentUpon>UserFiniUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\Editor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\Editor.Designer.cs">
+      <DependentUpon>Editor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\EloDistributionUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\EloDistributionUc.Designer.cs">
+      <DependentUpon>EloDistributionUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\NewsUc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\NewsUc.Designer.cs">
+      <DependentUpon>NewsUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\RankInfoUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\RankInfoUc.Designer.cs">
+      <DependentUpon>RankInfoUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\RatedGameResultUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\RatedGameResultUc.Designer.cs">
+      <DependentUpon>RatedGameResultUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\ChallengesUc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\ChallengesUc.Designer.cs">
+      <DependentUpon>ChallengesUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\ChannelsUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\ChannelsUc.Designer.cs">
+      <DependentUpon>ChannelsUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\ChatUc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\ChatUc.Designer.cs">
+      <DependentUpon>ChatUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\EventCalendarUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\EventCalendarUc.Designer.cs">
+      <DependentUpon>EventCalendarUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\GamesUc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\GamesUc.Designer.cs">
+      <DependentUpon>GamesUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\InboxUc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\InboxUc.Designer.cs">
+      <DependentUpon>InboxUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\InfoUc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\InfoUc.Designer.cs">
+      <DependentUpon>InfoUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\PlayersUc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\PlayersUc.Designer.cs">
+      <DependentUpon>PlayersUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\RoomUc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\RoomUc.Designer.cs">
+      <DependentUpon>RoomUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\SentUc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\SentUc.Designer.cs">
+      <DependentUpon>SentUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\ServerStatisticsUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\ServerStatisticsUc.Designer.cs">
+      <DependentUpon>ServerStatisticsUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\ServerTimeUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\ServerTimeUc.Designer.cs">
+      <DependentUpon>ServerTimeUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\UserListUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\UserListUc.Designer.cs">
+      <DependentUpon>UserListUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\UserTopRatingUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\UserTopRatingUc.Designer.cs">
+      <DependentUpon>UserTopRatingUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\WantInPlayerUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\WantInPlayerUc.Designer.cs">
+      <DependentUpon>WantInPlayerUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Uc\WorldUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Online\Uc\WorldUc.Designer.cs">
+      <DependentUpon>WorldUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\ShortCutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\ShortCutForm.Designer.cs">
+      <DependentUpon>ShortCutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Uc\AnalysisUc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Uc\AnalysisUc.Designer.cs">
+      <DependentUpon>AnalysisUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\DatabaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\DatabaseForm.Designer.cs">
+      <DependentUpon>DatabaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\PositionSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\PositionSetup.Designer.cs">
+      <DependentUpon>PositionSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\EngineManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\EngineManagement.Designer.cs">
+      <DependentUpon>EngineManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\SetupUCIEngine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\SetupUCIEngine.Designer.cs">
+      <DependentUpon>SetupUCIEngine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\EngineVsEngine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\EngineVsEngine.Designer.cs">
+      <DependentUpon>EngineVsEngine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\frmInsertNewVariation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\frmInsertNewVariation.Designer.cs">
+      <DependentUpon>frmInsertNewVariation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\LongClockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\LongClockForm.Designer.cs">
+      <DependentUpon>LongClockForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\BlitzClockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\BlitzClockForm.Designer.cs">
+      <DependentUpon>BlitzClockForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\OnlineClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\OnlineClient.Designer.cs">
+      <DependentUpon>OnlineClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\GameData\frmGameData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\GameData\frmGameData.Designer.cs">
+      <DependentUpon>frmGameData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\GameData\frmTournamentData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\GameData\frmTournamentData.Designer.cs">
+      <DependentUpon>frmTournamentData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\frmGameResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\frmGameResult.Designer.cs">
+      <DependentUpon>frmGameResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\InviteEngine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\InviteEngine.Designer.cs">
+      <DependentUpon>InviteEngine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\LoadEngine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\LoadEngine.Designer.cs">
+      <DependentUpon>LoadEngine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Online\Forms\UserData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Online\Forms\UserData.Designer.cs">
+      <DependentUpon>UserData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\OptionsPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\OptionsPopup.designer.cs">
+      <DependentUpon>OptionsPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Common\Forms\ProgressForm.resx">
+      <DependentUpon>ProgressForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Forms\DevForm.resx">
+      <DependentUpon>DevForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Forms\TestForm.resx">
+      <DependentUpon>TestForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Uc\DevUc.resx">
+      <DependentUpon>DevUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Uc\FilterUc.resx">
+      <DependentUpon>FilterUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\AboutCheckMate.resx">
+      <DependentUpon>AboutCheckMate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\BookOptionsPopup.resx">
+      <DependentUpon>BookOptionsPopup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\ChangeWeightPopup.resx">
+      <DependentUpon>ChangeWeightPopup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\ConvertFilesPopup.resx">
+      <DependentUpon>ConvertFilesPopup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\EngineParametersPopup.resx">
+      <DependentUpon>EngineParametersPopup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\frmGotoLineNumber.resx">
+      <DependentUpon>frmGotoLineNumber.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\GameSearch\GameSearch.resx">
+      <DependentUpon>GameSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\GameSearch\GameSearchProgress.resx">
+      <DependentUpon>GameSearchProgress.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\GameSearch\WaitingForm.resx">
+      <DependentUpon>WaitingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\ImportGameEditor.resx">
+      <DependentUpon>ImportGameEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\MainOffline.resx">
+      <DependentUpon>MainOffline.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\GameReport.resx">
+      <DependentUpon>GameReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Uc\BookUc.resx">
+      <DependentUpon>BookUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Uc\E2eResultUc.resx">
+      <DependentUpon>E2eResultUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Uc\GameInfoUc.resx">
+      <DependentUpon>GameInfoUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Uc\NotationUc.resx">
+      <DependentUpon>NotationUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Uc\PositionSetupUc.resx">
+      <DependentUpon>PositionSetupUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Uc\ScoringUc.resx">
+      <DependentUpon>ScoringUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\AvPlayer.resx">
+      <DependentUpon>AvPlayer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\BrowserForm.resx">
+      <DependentUpon>BrowserForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\ChallengeWindow.resx">
+      <DependentUpon>ChallengeWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\BanUserForm.resx">
+      <DependentUpon>BanUserForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\CheckoutAccount.resx">
+      <DependentUpon>CheckoutAccount.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\BlockedIPDetail.resx">
+      <DependentUpon>BlockedIPDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\SetupMatch.resx">
+      <DependentUpon>SetupMatch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\IPList.resx">
+      <DependentUpon>IPList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\LogList.resx">
+      <DependentUpon>LogList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\StandingsUc.resx">
+      <DependentUpon>StandingsUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\SwissResultsUc.resx">
+      <DependentUpon>SwissResultsUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\ScheveningenResultsUc.resx">
+      <DependentUpon>ScheveningenResultsUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\RoundRobinResultsUc.resx">
+      <DependentUpon>RoundRobinResultsUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\KnockOutResultsUc.resx">
+      <DependentUpon>KnockOutResultsUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\NotationViewerUc.resx">
+      <DependentUpon>NotationViewerUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\MatchEditor.resx">
+      <DependentUpon>MatchEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\RoomDetail.resx">
+      <DependentUpon>RoomDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\NewsDetail.resx">
+      <DependentUpon>NewsDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\NewsList.resx">
+      <DependentUpon>NewsList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\EnterMoveText.resx">
+      <DependentUpon>EnterMoveText.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\ForgotPasswordForm.resx">
+      <DependentUpon>ForgotPasswordForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\RankInfo.resx">
+      <DependentUpon>RankInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\RoomList.resx">
+      <DependentUpon>RoomList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\SchRegisterTeam.resx">
+      <DependentUpon>SchRegisterTeam.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\SeekWindow.resx">
+      <DependentUpon>SeekWindow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\EloDistribution.resx">
+      <DependentUpon>EloDistribution.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\MainOnline.resx">
+      <DependentUpon>MainOnline.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\PersonalInformation.resx">
+      <DependentUpon>PersonalInformation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\Formula.resx">
+      <DependentUpon>Formula.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\PlayingMode.resx">
+      <DependentUpon>PlayingMode.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\RatedGameResult.resx">
+      <DependentUpon>RatedGameResult.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\SearchPlayer.resx">
+      <DependentUpon>SearchPlayer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\SearchTitledPlayers.resx">
+      <DependentUpon>SearchTitledPlayers.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\SendMessage.resx">
+      <DependentUpon>SendMessage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\ServerStatistic.resx">
+      <DependentUpon>ServerStatistic.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\ServerTimeForm.resx">
+      <DependentUpon>ServerTimeForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\TeamDetail.resx">
+      <DependentUpon>TeamDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\TeamList.resx">
+      <DependentUpon>TeamList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\TournamentDetail.resx">
+      <DependentUpon>TournamentDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\TournamentList.resx">
+      <DependentUpon>TournamentList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\TournamentRegisterPlayer.resx">
+      <DependentUpon>TournamentRegisterPlayer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\BlockedIPDetailUc.resx">
+      <DependentUpon>BlockedIPDetailUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\SetupMatchUc.resx">
+      <DependentUpon>SetupMatchUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\IPListUc.resx">
+      <DependentUpon>IPListUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\LogListUc.resx">
+      <DependentUpon>LogListUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\MatchEditorUc.resx">
+      <DependentUpon>MatchEditorUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\RoomDetailUc.resx">
+      <DependentUpon>RoomDetailUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\RoomListUc.resx">
+      <DependentUpon>RoomListUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\SchRegisterTeamUc.resx">
+      <DependentUpon>SchRegisterTeamUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\SchTeamUc.resx">
+      <DependentUpon>SchTeamUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\TeamDetailUc.resx">
+      <DependentUpon>TeamDetailUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\TeamListUc.resx">
+      <DependentUpon>TeamListUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\TournamentListUc.resx">
+      <DependentUpon>TournamentListUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\UpdateClient.resx">
+      <DependentUpon>UpdateClient.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\UserList.resx">
+      <DependentUpon>UserList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\UserStatus.resx">
+      <DependentUpon>UserStatus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\UserTopRatingForm.resx">
+      <DependentUpon>UserTopRatingForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\AudienceUc.resx">
+      <DependentUpon>AudienceUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\AvClientUc.resx">
+      <DependentUpon>AvClientUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\BrowserUc.resx">
+      <DependentUpon>BrowserUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\BanUserUc.resx">
+      <DependentUpon>BanUserUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\CheckoutAccountUc.resx">
+      <DependentUpon>CheckoutAccountUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\TournamentMatchesUc.resx">
+      <DependentUpon>TournamentMatchesUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\NewsDetailUc.resx">
+      <DependentUpon>NewsDetailUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\NewsListUc.resx">
+      <DependentUpon>NewsListUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\PrizeUc.resx">
+      <DependentUpon>PrizeUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\RegisteredPlayerUc.resx">
+      <DependentUpon>RegisteredPlayerUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\RegisterPlayerUc.resx">
+      <DependentUpon>RegisterPlayerUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\ResultsUc.resx">
+      <DependentUpon>ResultsUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\TeamUc.resx">
+      <DependentUpon>TeamUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\TournamentDetailUc.resx">
+      <DependentUpon>TournamentDetailUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\TournamentUc.resx">
+      <DependentUpon>TournamentUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\TournamentViewUc.resx">
+      <DependentUpon>TournamentViewUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\UserFiniUc.resx">
+      <DependentUpon>UserFiniUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\Editor.resx">
+      <DependentUpon>Editor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\EloDistributionUc.resx">
+      <DependentUpon>EloDistributionUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\NewsUc.resx">
+      <DependentUpon>NewsUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\RankInfoUc.resx">
+      <DependentUpon>RankInfoUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\RatedGameResultUc.resx">
+      <DependentUpon>RatedGameResultUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\ChallengesUc.resx">
+      <DependentUpon>ChallengesUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\ChannelsUc.resx">
+      <DependentUpon>ChannelsUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\ChatUc.resx">
+      <DependentUpon>ChatUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\EventCalendarUc.resx">
+      <DependentUpon>EventCalendarUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\GamesUc.resx">
+      <DependentUpon>GamesUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\InboxUc.resx">
+      <DependentUpon>InboxUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\InfoUc.resx">
+      <DependentUpon>InfoUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\PlayersUc.resx">
+      <DependentUpon>PlayersUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\RoomUc.resx">
+      <DependentUpon>RoomUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\SentUc.resx">
+      <DependentUpon>SentUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\ServerStatisticsUc.resx">
+      <DependentUpon>ServerStatisticsUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\ServerTimeUc.resx">
+      <DependentUpon>ServerTimeUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\UserListUc.resx">
+      <DependentUpon>UserListUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\UserTopRatingUc.resx">
+      <DependentUpon>UserTopRatingUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\WantInPlayerUc.resx">
+      <DependentUpon>WantInPlayerUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Uc\WorldUc.resx">
+      <DependentUpon>WorldUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\ShortCutForm.resx">
+      <DependentUpon>ShortCutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Uc\AnalysisUc.resx">
+      <DependentUpon>AnalysisUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\DatabaseForm.resx">
+      <DependentUpon>DatabaseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\PositionSetup.resx">
+      <DependentUpon>PositionSetup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\EngineManagement.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EngineManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\SetupUCIEngine.resx">
+      <DependentUpon>SetupUCIEngine.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\EngineVsEngine.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EngineVsEngine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\frmInsertNewVariation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmInsertNewVariation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\BlitzClockForm.resx">
+      <DependentUpon>BlitzClockForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\LongClockForm.resx">
+      <DependentUpon>LongClockForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\LoginForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\OnlineClient.resx">
+      <DependentUpon>OnlineClient.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\GameData\frmGameData.resx">
+      <DependentUpon>frmGameData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\GameData\frmTournamentData.resx">
+      <DependentUpon>frmTournamentData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\frmGameResult.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmGameResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\InviteEngine.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InviteEngine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\LoadEngine.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>LoadEngine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Online\Forms\UserData.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\OptionsPopup.resx">
+      <DependentUpon>OptionsPopup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\Startup.resx">
+      <DependentUpon>Startup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\Tournament.resx">
+      <DependentUpon>Tournament.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Uc\CapturePieceUc.resx">
+      <DependentUpon>CapturePieceUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Uc\ClockUc.resx">
+      <DependentUpon>ClockUc.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Offline\Forms\UserInfo.resx">
+      <DependentUpon>UserInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Offline\Forms\Startup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\Startup.designer.cs">
+      <DependentUpon>Startup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\Tournament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\Tournament.Designer.cs">
+      <DependentUpon>Tournament.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Uc\CapturePieceUc.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Offline\Uc\CapturePieceUc.Designer.cs">
+      <DependentUpon>CapturePieceUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Uc\ClockUc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Uc\ClockUc.Designer.cs">
+      <DependentUpon>ClockUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Offline\Forms\UserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Offline\Forms\UserInfo.designer.cs">
+      <DependentUpon>UserInfo.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Circle.gif" />
+    <None Include="Resources\Circle.bmp" />
+    <None Include="Resources\engine.jpeg" />
+    <None Include="Resources\navigate_left.PNG" />
+    <None Include="Resources\WARNING.png" />
+    <None Include="Resources\UP_DOWN.PNG" />
+    <None Include="Resources\TV.png" />
+    <None Include="Resources\text_tree.png" />
+    <None Include="Resources\STOP.PNG" />
+    <None Include="Resources\selection_replace.png" />
+    <None Include="Resources\PIN_GREY.png" />
+    <None Include="Resources\PIN_BLUE.PNG" />
+    <None Include="Resources\photo_scenery.png" />
+    <None Include="Resources\navigate_right.png" />
+    <None Include="Resources\media_play_green.png" />
+    <None Include="Resources\magic_wand.png" />
+    <None Include="Resources\information.png" />
+    <None Include="Resources\HELP.png" />
+    <None Include="Resources\GEARS.PNG" />
+    <None Include="Resources\FIND.PNG" />
+    <None Include="Resources\FACTORY.PNG" />
+    <None Include="Resources\EXCHANGE.png" />
+    <None Include="Resources\environment_information.png" />
+    <None Include="Resources\elements1.png" />
+    <None Include="Resources\element_selection.png" />
+    <None Include="Resources\element_next.png" />
+    <None Include="Resources\dot-chart.png" />
+    <None Include="Resources\dot.png" />
+    <None Include="Resources\document_warning.png" />
+    <None Include="Resources\document_exchange.png" />
+    <None Include="Resources\DISKS.png" />
+    <None Include="Resources\disk_blue.png" />
+    <None Include="Resources\DELETE2.png" />
+    <None Include="Resources\currency_dollar_grayscale.png" />
+    <None Include="Resources\currency_dollar1.png" />
+    <None Include="Resources\currency_dollar.png" />
+    <None Include="Resources\CUBES.png" />
+    <None Include="Resources\cube_yellow.png" />
+    <None Include="Resources\cube_molecule.png" />
+    <None Include="Resources\cube_green.png" />
+    <None Include="Resources\CONTRACT.png" />
+    <None Include="Resources\CLIENTS.PNG" />
+    <None Include="Resources\CHECKS.png" />
+    <None Include="Resources\CHECK2.PNG" />
+    <None Include="Resources\CHART.PNG" />
+    <None Include="Resources\CABINET.png" />
+    <None Include="Resources\button_cancel_12_b.png" />
+    <None Include="Resources\button_cancel_12.png" />
+    <None Include="Resources\businessman.png" />
+    <None Include="Resources\briefcase2_view.png" />
+    <None Include="Resources\breakpoints.png" />
+    <None Include="Resources\breakpoint_selection.png" />
+    <None Include="Resources\breakpoint.png" />
+    <None Include="Resources\BOOKS.png" />
+    <None Include="Resources\arrow_up_green_24.png" />
+    <None Include="Resources\arrow_up_green1.png" />
+    <None Include="Resources\arrow_up_green.png" />
+    <None Include="Resources\arrow_down_red_24.png" />
+    <None Include="Resources\arrow_down_red.24.png" />
+    <None Include="Resources\arrow_down_red.png" />
+    <None Include="Resources\alarmclock_preferences.png" />
+    <None Include="Resources\address_book2.png" />
+    <None Include="Resources\address_book.png" />
+    <None Include="Resources\ADD2.png" />
+    <None Include="Resources\ADD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brown.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Green.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Purple.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Common\Help\Player\Index.hhk" />
+    <None Include="Common\Help\Player\InfinityChessHelp.hhp" />
+    <None Include="Common\Help\Player\Table of Contents.hhc" />
+    <None Include="Data\Books\InfinityChess.icb" />
+    <None Include="Data\Database\AutoSave.icd" />
+    <None Include="Data\Database\Database.icd" />
+    <None Include="Data\Help\InfinityChessHelp.chm" />
+    <None Include="Data\Images\BlackPiecessmall\Thumbs.db" />
+    <None Include="Data\Images\PiecesImages\Position Setup\Thumbs.db" />
+    <None Include="Data\Images\WhitePiecessmall\Thumbs.db" />
+    <None Include="Data\Kv\ColorScheme.thm" />
+    <None Include="Data\Kv\PiecesTheme.thm" />
+    <None Include="Data\Kv\PrintGameDataSet.xsc">
+      <DependentUpon>PrintGameDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data\Kv\PrintGameDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PrintGameDataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\Kv\PrintGameDataSet.xss">
+      <DependentUpon>PrintGameDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Data\Kv\Tournament.xsc">
+      <DependentUpon>Tournament.xsd</DependentUpon>
+    </None>
+    <None Include="Data\Kv\Tournament.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Tournament.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\Kv\Tournament.xss">
+      <DependentUpon>Tournament.xsd</DependentUpon>
+    </None>
+    <None Include="Offline\Model\Settings\ThemeSetting.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ThemeSetting.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\DataSources\InfinityChess.InfinityChessService.CompositeType.datasource" />
+    <None Include="Properties\DataSources\InfinityChess.InfinityChessService.Users.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <Content Include="Common\Help\Player\Images\NewsDetail.JPG" />
+    <Content Include="Common\Help\Player\Images\RoomDetail.JPG" />
+    <Content Include="Common\Help\Player\Images\TeamDetail.JPG" />
+    <Content Include="Common\Help\Player\Images\UserList.JPG" />
+    <Content Include="Common\Help\Player\News.html" />
+    <Content Include="Common\Help\Player\Room.htm" />
+    <Content Include="Common\Help\Player\Team.htm" />
+    <Content Include="Common\Help\Player\User.html" />
+    <Content Include="Common\Help\Player\BlitzClockForm.html" />
+    <Content Include="Common\Help\Player\BookOptionsPopup.html" />
+    <Content Include="Common\Help\Player\ChallangeWindow.html" />
+    <Content Include="Common\Help\Player\ConvertFilesPopup.html" />
+    <Content Include="Common\Help\Player\BoardDesign.html" />
+    <Content Include="Common\Help\Player\DatabaseForm.html" />
+    <Content Include="Common\Help\Player\EngineVsEngineMatch.html" />
+    <Content Include="Common\Help\Player\EnterMoveText.html" />
+    <Content Include="Common\Help\Player\ForgetPasswordForm.html" />
+    <Content Include="Common\Help\Player\Formula.html" />
+    <Content Include="Common\Help\Player\frmGameData.html" />
+    <Content Include="Common\Help\Player\HelpFile.css" />
+    <Content Include="Common\Help\Player\Images\BG.jpg" />
+    <Content Include="Common\Help\Player\Images\ConvertFile.JPG" />
+    <Content Include="Common\Help\Player\Images\EditGameData.JPG" />
+    <Content Include="Common\Help\Player\Images\GameResult.JPG" />
+    <Content Include="Common\Help\Player\Images\ImportGames.JPG" />
+    <Content Include="Common\Help\Player\Images\KnockOutAcceptingChallenge.JPG" />
+    <Content Include="Common\Help\Player\Images\KnockOutDrawMatch.JPG" />
+    <Content Include="Common\Help\Player\Images\KnockOutRegisterPlayer.JPG" />
+    <Content Include="Common\Help\Player\Images\KnockOutregisterUser.JPG" />
+    <Content Include="Common\Help\Player\Images\KnockOutStartTournament.JPG" />
+    <Content Include="Common\Help\Player\Images\KnockOutTournament.JPG" />
+    <Content Include="Common\Help\Player\Images\KnockOutWantIn.JPG" />
+    <Content Include="Common\Help\Player\Images\LoadEngine.JPG" />
+    <Content Include="Common\Help\Player\Images\LoginForm.JPG" />
+    <Content Include="Common\Help\Player\Images\LongGame.JPG" />
+    <Content Include="Common\Help\Player\Images\OptionBoard.JPG" />
+    <Content Include="Common\Help\Player\Images\OptionClkNotation.JPG" />
+    <Content Include="Common\Help\Player\Images\PlayingMode.JPG" />
+    <Content Include="Common\Help\Player\Images\PositionSetup.JPG" />
+    <Content Include="Common\Help\Player\Images\seek.JPG" />
+    <Content Include="Common\Help\Player\Images\Setup UCI Engines.JPG" />
+    <Content Include="Common\Help\Player\Images\Tablebases.JPG" />
+    <Content Include="Common\Help\Player\Images\Teampage.JPG" />
+    <Content Include="Common\Help\Player\Images\TieBreakMatch.JPG" />
+    <Content Include="Common\Help\Player\Images\userdata.JPG" />
+    <Content Include="Common\Help\Player\Images\UserInfo.JPG" />
+    <Content Include="Common\Help\Player\KnockOutTournament.htm" />
+    <Content Include="Common\Help\Player\LongClockForm.html" />
+    <Content Include="Common\Help\Player\Schevengentournamentmanuall.htm" />
+    <Content Include="Common\Help\Player\TopicID.h" />
+    <Content Include="Common\Help\Player\TournamentData.html" />
+    <Content Include="Common\Help\Player\Images\Blitz.JPG" />
+    <Content Include="Common\Help\Player\Images\BoardDesign.JPG" />
+    <Content Include="Common\Help\Player\Images\Bookoption.JPG" />
+    <Content Include="Common\Help\Player\Images\ChallengerWindow.JPG" />
+    <Content Include="Common\Help\Player\Images\DBWindow.JPG" />
+    <Content Include="Common\Help\Player\Images\EnginevsEngine.JPG" />
+    <Content Include="Common\Help\Player\Images\EnterMoveText.JPG" />
+    <Content Include="Common\Help\Player\Images\ForgotPassword.JPG" />
+    <Content Include="Common\Help\Player\Images\Formula.JPG" />
+    <Content Include="Common\Help\Player\Images\FourthCommingEvent.JPG" />
+    <Content Include="Common\Help\Player\Images\FourthCommingEventReqSend.JPG" />
+    <Content Include="Common\Help\Player\Images\FourthCommingTournament.JPG" />
+    <Content Include="Common\Help\Player\Images\Main.JPG" />
+    <Content Include="Common\Help\Player\Images\NewAccount.JPG" />
+    <Content Include="Common\Help\Player\Images\Prize.JPG" />
+    <Content Include="Common\Help\Player\Images\SignIn.JPG" />
+    <Content Include="Common\Help\Player\Images\WantInReq.JPG" />
+    <Content Include="Common\Help\Player\ImportGameEditor.html" />
+    <Content Include="Common\Help\Player\LoadEngine.html" />
+    <Content Include="Common\Help\Player\Login.html" />
+    <Content Include="Common\Help\Player\OptionsPopup.html" />
+    <Content Include="Common\Help\Player\PlayerManual.htm" />
+    <Content Include="Common\Help\Player\PlayingMode.html" />
+    <Content Include="Common\Help\Player\PositionSetup.html" />
+    <Content Include="Common\Help\Player\RatedGameResult.html" />
+    <Content Include="Common\Help\Player\Seek.html" />
+    <Content Include="Common\Help\Player\SetupUCIEngine.html" />
+    <Content Include="Common\Help\Player\Tournament.html" />
+    <Content Include="Common\Help\Player\UserData.html" />
+    <Content Include="Common\Help\Player\UserInfo.html" />
+    <Content Include="Common\Help\Player\Images\AllPlayer.JPG" />
+    <Content Include="Common\Help\Player\Images\ApprovedWantinPlayer.JPG" />
+    <Content Include="Common\Help\Player\Images\CreateScheveningenTournament.JPG" />
+    <Content Include="Common\Help\Player\Images\DocHistory.JPG" />
+    <Content Include="Common\Help\Player\Images\DoubleRoundRobinResult.JPG" />
+    <Content Include="Common\Help\Player\Images\FinishMatch.JPG" />
+    <Content Include="Common\Help\Player\Images\FinishTournament.JPG" />
+    <Content Include="Common\Help\Player\Images\KnockOutResult.JPG" />
+    <Content Include="Common\Help\Player\Images\RegisterPlayer.JPG" />
+    <Content Include="Common\Help\Player\Images\RoundRobinResult.JPG" />
+    <Content Include="Common\Help\Player\Images\SchevengineResult.JPG" />
+    <Content Include="Common\Help\Player\Images\ScheveningenTournamentResult.JPG" />
+    <Content Include="Common\Help\Player\Images\SelectTeam.JPG" />
+    <Content Include="Common\Help\Player\Images\SelectTeam2.JPG" />
+    <Content Include="Common\Help\Player\Images\SelectTeam3.JPG" />
+    <Content Include="Common\Help\Player\Images\StartMatch.JPG" />
+    <Content Include="Common\Help\Player\Images\StartTournament.JPG" />
+    <Content Include="Common\Help\Player\Images\TeamTab.JPG" />
+    <Content Include="Common\Help\Player\Images\TournamentMatches.JPG" />
+    <Content Include="Common\Help\Player\Images\Wantin.JPG" />
+    <Content Include="Common\Help\Player\Images\Enter Tournament Info.JPG" />
+    <Content Include="Common\Help\Player\Images\Intro.JPG" />
+    <Content Include="Common\Help\Player\Images\NewTournament.JPG" />
+    <Content Include="Common\Help\Player\Images\TournamentDetail.JPG" />
+    <Content Include="Common\Help\Player\Images\version.JPG" />
+    <Content Include="Common\Help\Player\TournamentDirectorManual.htm" />
+    <Content Include="Data\Images\Challenges\decline.png" />
+    <Content Include="Data\Images\Challenges\down arrown.png" />
+    <Content Include="Data\Images\Challenges\incoming.png" />
+    <Content Include="Data\Images\Challenges\incomingSeek.png" />
+    <Content Include="Data\Images\Challenges\modify.ico" />
+    <Content Include="Data\Images\Challenges\outgoing.png" />
+    <Content Include="Data\Images\Challenges\outgoingSeek.png" />
+    <Content Include="Data\Images\Challenges\up arrown.png" />
+    <Content Include="Data\Images\Email\deliver.png" />
+    <Content Include="Data\Images\Email\recieve.png" />
+    <Content Include="Data\Images\Email\send.png" />
+    <Content Include="Data\Images\Flags\1.png" />
+    <Content Include="Data\Images\Flags\10.png" />
+    <Content Include="Data\Images\Flags\100.png" />
+    <Content Include="Data\Images\Flags\101.png" />
+    <Content Include="Data\Images\Flags\102.png" />
+    <Content Include="Data\Images\Flags\103.png" />
+    <Content Include="Data\Images\Flags\104.png" />
+    <Content Include="Data\Images\Flags\105.png" />
+    <Content Include="Data\Images\Flags\106.png" />
+    <Content Include="Data\Images\Flags\107.png" />
+    <Content Include="Data\Images\Flags\108.png" />
+    <Content Include="Data\Images\Flags\109.png" />
+    <Content Include="Data\Images\Flags\11.png" />
+    <Content Include="Data\Images\Flags\110.png" />
+    <Content Include="Data\Images\Flags\111.png" />
+    <Content Include="Data\Images\Flags\112.png" />
+    <Content Include="Data\Images\Flags\113.png" />
+    <Content Include="Data\Images\Flags\114.png" />
+    <Content Include="Data\Images\Flags\115.png" />
+    <Content Include="Data\Images\Flags\116.png" />
+    <Content Include="Data\Images\Flags\117.png" />
+    <Content Include="Data\Images\Flags\118.png" />
+    <Content Include="Data\Images\Flags\119.png" />
+    <Content Include="Data\Images\Flags\12.png" />
+    <Content Include="Data\Images\Flags\120.png" />
+    <Content Include="Data\Images\Flags\121.png" />
+    <Content Include="Data\Images\Flags\122.png" />
+    <Content Include="Data\Images\Flags\123.png" />
+    <Content Include="Data\Images\Flags\124.png" />
+    <Content Include="Data\Images\Flags\125.png" />
+    <Content Include="Data\Images\Flags\126.png" />
+    <Content Include="Data\Images\Flags\127.png" />
+    <Content Include="Data\Images\Flags\128.png" />
+    <Content Include="Data\Images\Flags\129.png" />
+    <Content Include="Data\Images\Flags\130.png" />
+    <Content Include="Data\Images\Flags\131.png" />
+    <Content Include="Data\Images\Flags\132.png" />
+    <Content Include="Data\Images\Flags\133.png" />
+    <Content Include="Data\Images\Flags\134.png" />
+    <Content Include="Data\Images\Flags\135.png" />
+    <Content Include="Data\Images\Flags\136.png" />
+    <Content Include="Data\Images\Flags\137.png" />
+    <Content Include="Data\Images\Flags\138.png" />
+    <Content Include="Data\Images\Flags\139.png" />
+    <Content Include="Data\Images\Flags\14.png" />
+    <Content Include="Data\Images\Flags\140.png" />
+    <Content Include="Data\Images\Flags\141.png" />
+    <Content Include="Data\Images\Flags\142.png" />
+    <Content Include="Data\Images\Flags\143.png" />
+    <Content Include="Data\Images\Flags\144.png" />
+    <Content Include="Data\Images\Flags\145.png" />
+    <Content Include="Data\Images\Flags\146.png" />
+    <Content Include="Data\Images\Flags\147.png" />
+    <Content Include="Data\Images\Flags\148.png" />
+    <Content Include="Data\Images\Flags\149.png" />
+    <Content Include="Data\Images\Flags\15.png" />
+    <Content Include="Data\Images\Flags\150.png" />
+    <Content Include="Data\Images\Flags\151.png" />
+    <Content Include="Data\Images\Flags\152.png" />
+    <Content Include="Data\Images\Flags\153.png" />
+    <Content Include="Data\Images\Flags\154.png" />
+    <Content Include="Data\Images\Flags\155.png" />
+    <Content Include="Data\Images\Flags\156.png" />
+    <Content Include="Data\Images\Flags\157.png" />
+    <Content Include="Data\Images\Flags\158.png" />
+    <Content Include="Data\Images\Flags\159.png" />
+    <Content Include="Data\Images\Flags\16.png" />
+    <Content Include="Data\Images\Flags\160.png" />
+    <Content Include="Data\Images\Flags\161.png" />
+    <Content Include="Data\Images\Flags\162.png" />
+    <Content Include="Data\Images\Flags\163.png" />
+    <Content Include="Data\Images\Flags\164.png" />
+    <Content Include="Data\Images\Flags\165.png" />
+    <Content Include="Data\Images\Flags\166.png" />
+    <Content Include="Data\Images\Flags\167.png" />
+    <Content Include="Data\Images\Flags\168.png" />
+    <Content Include="Data\Images\Flags\169.png" />
+    <Content Include="Data\Images\Flags\17.png" />
+    <Content Include="Data\Images\Flags\170.png" />
+    <Content Include="Data\Images\Flags\171.png" />
+    <Content Include="Data\Images\Flags\172.png" />
+    <Content Include="Data\Images\Flags\173.png" />
+    <Content Include="Data\Images\Flags\174.png" />
+    <Content Include="Data\Images\Flags\175.png" />
+    <Content Include="Data\Images\Flags\176.png" />
+    <Content Include="Data\Images\Flags\177.png" />
+    <Content Include="Data\Images\Flags\178.png" />
+    <Content Include="Data\Images\Flags\179.png" />
+    <Content Include="Data\Images\Flags\18.png" />
+    <Content Include="Data\Images\Flags\180.png" />
+    <Content Include="Data\Images\Flags\181.png" />
+    <Content Include="Data\Images\Flags\182.png" />
+    <Content Include="Data\Images\Flags\183.png" />
+    <Content Include="Data\Images\Flags\184.png" />
+    <Content Include="Data\Images\Flags\185.png" />
+    <Content Include="Data\Images\Flags\186.png" />
+    <Content Include="Data\Images\Flags\187.png" />
+    <Content Include="Data\Images\Flags\188.png" />
+    <Content Include="Data\Images\Flags\189.png" />
+    <Content Include="Data\Images\Flags\19.png" />
+    <Content Include="Data\Images\Flags\190.png" />
+    <Content Include="Data\Images\Flags\191.png" />
+    <Content Include="Data\Images\Flags\192.png" />
+    <Content Include="Data\Images\Flags\193.png" />
+    <Content Include="Data\Images\Flags\194.png" />
+    <Content Include="Data\Images\Flags\195.png" />
+    <Content Include="Data\Images\Flags\196.png" />
+    <Content Include="Data\Images\Flags\197.png" />
+    <Content Include="Data\Images\Flags\198.png" />
+    <Content Include="Data\Images\Flags\199.png" />
+    <Content Include="Data\Images\Flags\2.png" />
+    <Content Include="Data\Images\Flags\20.png" />
+    <Content Include="Data\Images\Flags\200.png" />
+    <Content Include="Data\Images\Flags\201.png" />
+    <Content Include="Data\Images\Flags\202.png" />
+    <Content Include="Data\Images\Flags\203.png" />
+    <Content Include="Data\Images\Flags\204.png" />
+    <Content Include="Data\Images\Flags\205.png" />
+    <Content Include="Data\Images\Flags\206.png" />
+    <Content Include="Data\Images\Flags\207.png" />
+    <Content Include="Data\Images\Flags\208.png" />
+    <Content Include="Data\Images\Flags\209.png" />
+    <Content Include="Data\Images\Flags\21.png" />
+    <Content Include="Data\Images\Flags\210.png" />
+    <Content Include="Data\Images\Flags\211.png" />
+    <Content Include="Data\Images\Flags\212.png" />
+    <Content Include="Data\Images\Flags\213.png" />
+    <Content Include="Data\Images\Flags\214.png" />
+    <Content Include="Data\Images\Flags\215.png" />
+    <Content Include="Data\Images\Flags\216.png" />
+    <Content Include="Data\Images\Flags\217.png" />
+    <Content Include="Data\Images\Flags\218.png" />
+    <Content Include="Data\Images\Flags\219.png" />
+    <Content Include="Data\Images\Flags\22.png" />
+    <Content Include="Data\Images\Flags\220.png" />
+    <Content Include="Data\Images\Flags\221.png" />
+    <Content Include="Data\Images\Flags\222.png" />
+    <Content Include="Data\Images\Flags\223.png" />
+    <Content Include="Data\Images\Flags\224.png" />
+    <Content Include="Data\Images\Flags\225.png" />
+    <Content Include="Data\Images\Flags\226.png" />
+    <Content Include="Data\Images\Flags\227.png" />
+    <Content Include="Data\Images\Flags\228.png" />
+    <Content Include="Data\Images\Flags\23.png" />
+    <Content Include="Data\Images\Flags\230.png" />
+    <Content Include="Data\Images\Flags\231.png" />
+    <Content Include="Data\Images\Flags\232.png" />
+    <Content Include="Data\Images\Flags\233.png" />
+    <Content Include="Data\Images\Flags\234.png" />
+    <Content Include="Data\Images\Flags\235.png" />
+    <Content Include="Data\Images\Flags\236.png" />
+    <Content Include="Data\Images\Flags\237.png" />
+    <Content Include="Data\Images\Flags\238.png" />
+    <Content Include="Data\Images\Flags\239.png" />
+    <Content Include="Data\Images\Flags\24.png" />
+    <Content Include="Data\Images\Flags\240.png" />
+    <Content Include="Data\Images\Flags\241.png" />
+    <Content Include="Data\Images\Flags\242.png" />
+    <Content Include="Data\Images\Flags\243.png" />
+    <Content Include="Data\Images\Flags\244.png" />
+    <Content Include="Data\Images\Flags\25.png" />
+    <Content Include="Data\Images\Flags\26.png" />
+    <Content Include="Data\Images\Flags\27.png" />
+    <Content Include="Data\Images\Flags\28.png" />
+    <Content Include="Data\Images\Flags\29.png" />
+    <Content Include="Data\Images\Flags\3.png" />
+    <Content Include="Data\Images\Flags\30.png" />
+    <Content Include="Data\Images\Flags\31.png" />
+    <Content Include="Data\Images\Flags\32.png" />
+    <Content Include="Data\Images\Flags\33.png" />
+    <Content Include="Data\Images\Flags\34.png" />
+    <Content Include="Data\Images\Flags\35.png" />
+    <Content Include="Data\Images\Flags\36.png" />
+    <Content Include="Data\Images\Flags\37.png" />
+    <Content Include="Data\Images\Flags\38.png" />
+    <Content Include="Data\Images\Flags\39.png" />
+    <Content Include="Data\Images\Flags\4.png" />
+    <Content Include="Data\Images\Flags\40.png" />
+    <Content Include="Data\Images\Flags\41.png" />
+    <Content Include="Data\Images\Flags\42.png" />
+    <Content Include="Data\Images\Flags\43.png" />
+    <Content Include="Data\Images\Flags\44.png" />
+    <Content Include="Data\Images\Flags\45.png" />
+    <Content Include="Data\Images\Flags\46.png" />
+    <Content Include="Data\Images\Flags\47.png" />
+    <Content Include="Data\Images\Flags\48.png" />
+    <Content Include="Data\Images\Flags\49.png" />
+    <Content Include="Data\Images\Flags\5.png" />
+    <Content Include="Data\Images\Flags\50.png" />
+    <Content Include="Data\Images\Flags\51.png" />
+    <Content Include="Data\Images\Flags\52.png" />
+    <Content Include="Data\Images\Flags\53.png" />
+    <Content Include="Data\Images\Flags\54.png" />
+    <Content Include="Data\Images\Flags\55.png" />
+    <Content Include="Data\Images\Flags\56.png" />
+    <Content Include="Data\Images\Flags\57.png" />
+    <Content Include="Data\Images\Flags\58.png" />
+    <Content Include="Data\Images\Flags\59.png" />
+    <Content Include="Data\Images\Flags\6.png" />
+    <Content Include="Data\Images\Flags\60.png" />
+    <Content Include="Data\Images\Flags\61.png" />
+    <Content Include="Data\Images\Flags\62.png" />
+    <Content Include="Data\Images\Flags\63.png" />
+    <Content Include="Data\Images\Flags\64.png" />
+    <Content Include="Data\Images\Flags\65.png" />
+    <Content Include="Data\Images\Flags\66.png" />
+    <Content Include="Data\Images\Flags\67.png" />
+    <Content Include="Data\Images\Flags\68.png" />
+    <Content Include="Data\Images\Flags\69.png" />
+    <Content Include="Data\Images\Flags\7.png" />
+    <Content Include="Data\Images\Flags\70.png" />
+    <Content Include="Data\Images\Flags\71.png" />
+    <Content Include="Data\Images\Flags\72.png" />
+    <Content Include="Data\Images\Flags\73.png" />
+    <Content Include="Data\Images\Flags\74.png" />
+    <Content Include="Data\Images\Flags\75.png" />
+    <Content Include="Data\Images\Flags\76.png" />
+    <Content Include="Data\Images\Flags\77.png" />
+    <Content Include="Data\Images\Flags\78.png" />
+    <Content Include="Data\Images\Flags\79.png" />
+    <Content Include="Data\Images\Flags\8.png" />
+    <Content Include="Data\Images\Flags\81.png" />
+    <Content Include="Data\Images\Flags\82.png" />
+    <Content Include="Data\Images\Flags\83.png" />
+    <Content Include="Data\Images\Flags\84.png" />
+    <Content Include="Data\Images\Flags\85.png" />
+    <Content Include="Data\Images\Flags\86.png" />
+    <Content Include="Data\Images\Flags\87.png" />
+    <Content Include="Data\Images\Flags\88.png" />
+    <Content Include="Data\Images\Flags\89.png" />
+    <Content Include="Data\Images\Flags\9.png" />
+    <Content Include="Data\Images\Flags\90.png" />
+    <Content Include="Data\Images\Flags\91.png" />
+    <Content Include="Data\Images\Flags\92.png" />
+    <Content Include="Data\Images\Flags\93.png" />
+    <Content Include="Data\Images\Flags\94.png" />
+    <Content Include="Data\Images\Flags\95.png" />
+    <Content Include="Data\Images\Flags\96.png" />
+    <Content Include="Data\Images\Flags\98.png" />
+    <Content Include="Data\Images\Flags\99.png" />
+    <Content Include="Data\Images\GameTypes\1.png" />
+    <Content Include="Data\Images\GameTypes\2.png" />
+    <Content Include="Data\Images\GameTypes\3.png" />
+    <Content Include="Data\Images\GameTypes\4.png" />
+    <Content Include="Data\Images\GameTypes\5.png" />
+    <Content Include="Data\Images\Internet\1.png" />
+    <Content Include="Data\Images\Internet\2.png" />
+    <Content Include="Data\Images\Internet\3.png" />
+    <Content Include="Data\Images\Internet\4.png" />
+    <Content Include="Data\Images\Internet\5.png" />
+    <Content Include="Data\Images\main.ico" />
+    <Content Include="Data\Images\Ranks\Admin.png" />
+    <Content Include="Data\Images\Ranks\Bishop.png" />
+    <Content Include="Data\Images\Ranks\Guest.png" />
+    <Content Include="Data\Images\Ranks\King.png" />
+    <Content Include="Data\Images\Ranks\Knight.png" />
+    <Content Include="Data\Images\Ranks\Pawn.png" />
+    <Content Include="Data\Images\Ranks\Queen.png" />
+    <Content Include="Data\Images\Ranks\Rook.png" />
+    <Content Include="Data\Images\Rooms\Building.png" />
+    <Content Include="Data\Images\Rooms\category1.png" />
+    <Content Include="Data\Images\Rooms\category2.png" />
+    <Content Include="Data\Images\Rooms\category3.png" />
+    <Content Include="Data\Images\Rooms\room.png" />
+    <Content Include="Data\Images\Rooms\room1.png" />
+    <Content Include="Data\Images\Rooms\room2.png" />
+    <Content Include="Data\Images\Rooms\room3.png" />
+    <Content Include="Data\Images\Rooms\room4.png" />
+    <Content Include="Data\Images\smiley\2tounge.png" />
+    <Content Include="Data\Images\smiley\Angry.png" />
+    <Content Include="Data\Images\smiley\Happy.png" />
+    <Content Include="Data\Images\smiley\Kiss.png" />
+    <Content Include="Data\Images\smiley\Laughing.png" />
+    <Content Include="Data\Images\smiley\Party.png" />
+    <Content Include="Data\Images\smiley\Question.png" />
+    <Content Include="Data\Images\smiley\Sad.png" />
+    <Content Include="Data\Images\smiley\Sleep.png" />
+    <Content Include="Data\Images\smiley\smiley.png" />
+    <Content Include="Data\Images\smiley\Suprised.png" />
+    <Content Include="Data\Images\smiley\Unfair.png" />
+    <Content Include="Data\Images\smiley\Wink.png" />
+    <None Include="Data\Kv\NearestCity.icx" />
+    <None Include="Data\Kv\CountryLong.icx" />
+    <None Include="Data\Kv\Eco.icx" />
+    <None Include="Data\Kv\None.icx" />
+    <None Include="Data\Kv\TournamentType.icx" />
+    <None Include="Data\Kv\ResultSymbols.icx" />
+    <None Include="Data\Kv\Country.icx" />
+    <Content Include="Data\Images\BlackPiecessmall\black_bishop.gif" />
+    <Content Include="Data\Images\BlackPiecessmall\black_king.gif" />
+    <Content Include="Data\Images\BlackPiecessmall\black_knight.gif" />
+    <Content Include="Data\Images\BlackPiecessmall\black_pawn.gif" />
+    <Content Include="Data\Images\BlackPiecessmall\black_queen.gif" />
+    <Content Include="Data\Images\BlackPiecessmall\black_rook.gif" />
+    <Content Include="Data\Images\BlackPieces\black_bishop.gif" />
+    <Content Include="Data\Images\BlackPieces\black_king.gif" />
+    <Content Include="Data\Images\BlackPieces\black_knight.gif" />
+    <Content Include="Data\Images\BlackPieces\black_pawn.gif" />
+    <Content Include="Data\Images\BlackPieces\black_queen.gif" />
+    <Content Include="Data\Images\BlackPieces\black_rook.gif" />
+    <None Include="Data\Kv\BookOptionsData.Settings.icx" />
+    <Content Include="Data\Engines\CrypticII.exe" />
+    <None Include="Data\Kv\EngineManagerData.Settings.icx" />
+    <None Include="Data\Kv\OptionsSetups.icx" />
+    <Content Include="Data\Images\PiecesImages\Position Setup Small\black_bishop.png" />
+    <Content Include="Data\Images\PiecesImages\Position Setup Small\black_king.png" />
+    <Content Include="Data\Images\PiecesImages\Position Setup Small\black_knight.png" />
+    <Content Include="Data\Images\PiecesImages\Position Setup Small\black_pawn.png" />
+    <Content Include="Data\Images\PiecesImages\Position Setup Small\black_queen.png" />
+    <Content Include="Data\Images\PiecesImages\Position Setup Small\black_rook.png" />
+    <Content Include="Data\Images\PiecesImages\Position Setup Small\white_bishop.png" />
+    <Content Include="Data\Images\PiecesImages\Position Setup Small\white_king.png" />
+    <Content Include="Data\Images\PiecesImages\Position Setup Small\white_knight.png" />
+    <Content Include="Data\Images\PiecesImages\Position Setup Small\white_pawn.png" />
+    <Content Include="Data\Images\PiecesImages\Position Setup Small\white_queen.png" />
+    <Content Include="Data\Images\PiecesImages\Position Setup Small\white_rook.png" />
+    <Content Include="Data\Images\PiecesImages\Position Setup\black_bishop.png" />
+    <Content Include="Data\Images\PiecesImages\Position Setup\black_king.png" />
+    <Content Include="Data\Images\PiecesImages\Position Setup\black_knight.png" />
+    <Content Include="Data\Images\PiecesImages\Position Setup\black_pawn.png" />
+    <Content Include="Data\Images\PiecesImages\Position Setup\black_queen.png" />
+    <Content Include="Data\Images\PiecesImages\Position Setup\black_rook.png" />
+    <Content Include="Data\Images\PiecesImages\Position Setup\white_bishop.png" />
+    <Content Include="Data\Images\PiecesImages\Position Setup\white_king.png" />
+    <Content Include="Data\Images\PiecesImages\Position Setup\white_knight.png" />
+    <Content Include="Data\Images\PiecesImages\Position Setup\white_pawn.png" />
+    <Content Include="Data\Images\PiecesImages\Position Setup\white_queen.png" />
+    <Content Include="Data\Images\PiecesImages\Position Setup\white_rook.png" />
+    <Content Include="Data\Images\Background\Blue_background.jpg" />
+    <Content Include="Data\Images\Background\Brown_background.jpeg" />
+    <Content Include="Data\Images\Background\Brown_background.jpg" />
+    <Content Include="Data\Images\Background\Cloth_background.jpg" />
+    <Content Include="Data\Images\Background\DarkWood_background.jpg" />
+    <Content Include="Data\Images\Background\Green_background.jpg" />
+    <Content Include="Data\Images\Background\Lightbrown_background.jpg" />
+    <Content Include="Data\Images\Background\LightMarble_background.jpg" />
+    <Content Include="Data\Images\Background\Metal_background.jpg" />
+    <Content Include="Data\Images\Background\pink_background.jpg" />
+    <Content Include="Data\Images\Background\UserBMP_background.jpg" />
+    <Content Include="Data\Images\SquaresImages\Babinga_dark.jpg" />
+    <Content Include="Data\Images\SquaresImages\Babinga_light.jpg" />
+    <Content Include="Data\Images\SquaresImages\Blue_dark.jpg" />
+    <Content Include="Data\Images\SquaresImages\Blue_light.jpg" />
+    <Content Include="Data\Images\SquaresImages\brown_dark.jpg" />
+    <Content Include="Data\Images\SquaresImages\brown_light.jpg" />
+    <Content Include="Data\Images\SquaresImages\Cherry_dark.jpg" />
+    <Content Include="Data\Images\SquaresImages\Cherry_light.jpg" />
+    <Content Include="Data\Images\SquaresImages\Green_dark.jpg" />
+    <Content Include="Data\Images\SquaresImages\Green_light.jpg" />
+    <Content Include="Data\Images\SquaresImages\Lightbrown_dark.jpg" />
+    <Content Include="Data\Images\SquaresImages\Lightbrown_light.jpg" />
+    <Content Include="Data\Images\SquaresImages\maple_dark.jpg" />
+    <Content Include="Data\Images\SquaresImages\maple_light.jpg" />
+    <Content Include="Data\Images\SquaresImages\pink_dark.jpg" />
+    <Content Include="Data\Images\SquaresImages\pink_light.jpg" />
+    <Content Include="Data\Images\SquaresImages\Teak_dark.jpg" />
+    <Content Include="Data\Images\SquaresImages\Teak_light.jpg" />
+    <Content Include="Data\Images\SquaresImages\UserBMP_dark.jpg" />
+    <Content Include="Data\Images\SquaresImages\UserBMP_light.jpg" />
+    <Content Include="Data\Images\profileImage.jpg" />
+    <None Include="Data\Kv\EngineParameters.icx" />
+    <None Include="Data\Kv\GameData.icx" />
+    <None Include="Data\Kv\Options.icx" />
+    <Content Include="Data\Images\WhitePiecessmall\white_bishop.gif" />
+    <Content Include="Data\Images\WhitePiecessmall\white_king.gif" />
+    <Content Include="Data\Images\WhitePiecessmall\white_knight.gif" />
+    <Content Include="Data\Images\WhitePiecessmall\white_pawn.gif" />
+    <Content Include="Data\Images\WhitePiecessmall\white_queen.gif" />
+    <Content Include="Data\Images\WhitePiecessmall\white_rook.gif" />
+    <Content Include="Data\Images\WhitePieces\white_bishop.gif" />
+    <Content Include="Data\Images\WhitePieces\white_king.gif" />
+    <Content Include="Data\Images\WhitePieces\white_knight.gif" />
+    <Content Include="Data\Images\WhitePieces\white_pawn.gif" />
+    <Content Include="Data\Images\WhitePieces\white_queen.gif" />
+    <Content Include="Data\Images\WhitePieces\white_rook.gif" />
+    <Content Include="Data\Media\Av.swf" />
+    <Content Include="Data\Media\Capture.wav" />
+    <Content Include="Data\Media\Illegal.wav" />
+    <Content Include="Data\Media\Move.wav" />
+    <Content Include="Data\Media\Ring.wav" />
+    <Content Include="Data\Media\SetPieces.wav" />
+    <Content Include="main.ico" />
+    <Content Include="Offline\Resource\Icons\2nd_arrow _right.ico" />
+    <Content Include="Offline\Resource\Icons\2nd_arrow_left.ico" />
+    <Content Include="Offline\Resource\Icons\analyse_the_current.ico" />
+    <Content Include="Offline\Resource\Icons\arrow_left.ico" />
+    <Content Include="Offline\Resource\Icons\arrow_right.ico" />
+    <Content Include="Offline\Resource\Icons\ask_for_an_advice.ico" />
+    <Content Include="Offline\Resource\Icons\blitz_time_controle.ico" />
+    <Content Include="Offline\Resource\Icons\book_options.ico" />
+    <Content Include="Offline\Resource\Icons\buddy_mood.ico" />
+    <Content Include="Offline\Resource\Icons\Change_Board_Design.ico" />
+    <Content Include="Offline\Resource\Icons\change_dimension.ico" />
+    <Content Include="Offline\Resource\Icons\change_engine.ico" />
+    <Content Include="Offline\Resource\Icons\force_engine.ico" />
+    <Content Include="Offline\Resource\Icons\input_username&amp;information.ico" />
+    <Content Include="Offline\Resource\Icons\input_username_&amp;_information_new.ico" />
+    <Content Include="Offline\Resource\Icons\long_time_controler.ico" />
+    <Content Include="Offline\Resource\Icons\new_game.ICO" />
+    <Content Include="Offline\Resource\Icons\new_rated_game.ico" />
+    <Content Include="Offline\Resource\Icons\offer_draw.ico" />
+    <Content Include="Offline\Resource\Icons\open_ game_database.ico" />
+    <Content Include="Offline\Resource\Icons\resign_the_game.ico" />
+    <Content Include="Offline\Resource\Icons\retract.ico" />
+    <Content Include="Offline\Resource\Icons\rotate.ico" />
+    <Content Include="Offline\Resource\Icons\Save.ico" />
+    <Content Include="Offline\Resource\Icons\set_ the_standard_layout.ico" />
+    <Content Include="Offline\Resource\Icons\set_the_handicap_level.ico" />
+    <Content Include="Offline\Resource\Icons\set_the_main program_options.ico" />
+    <Content Include="Offline\Resource\Icons\toggle_full_screen.ico" />
+    <Content Include="Offline\Resource\Infinity-Chess-Logo.png" />
+    <Content Include="Online\Forms\Tournament\Uc\Icons\2start_tournament.png" />
+    <Content Include="Online\Forms\Tournament\Uc\Icons\absent.png" />
+    <Content Include="Online\Forms\Tournament\Uc\Icons\Active.png" />
+    <Content Include="Online\Forms\Tournament\Uc\Icons\Approved.png" />
+    <Content Include="Online\Forms\Tournament\Uc\Icons\Blackbye.png" />
+    <Content Include="Online\Forms\Tournament\Uc\Icons\decline.png" />
+    <Content Include="Online\Forms\Tournament\Uc\Icons\delete.png" />
+    <Content Include="Online\Forms\Tournament\Uc\Icons\InActive.png" />
+    <Content Include="Online\Forms\Tournament\Uc\Icons\matches.png" />
+    <Content Include="Online\Forms\Tournament\Uc\Icons\new.png" />
+    <Content Include="Online\Forms\Tournament\Uc\Icons\postpone.png" />
+    <Content Include="Online\Forms\Tournament\Uc\Icons\standings.png" />
+    <Content Include="Online\Forms\Tournament\Uc\Icons\start_tournament.png" />
+    <Content Include="Online\Forms\Tournament\Uc\Icons\View.png" />
+    <Content Include="Online\Forms\Tournament\Uc\Icons\wantin.png" />
+    <Content Include="Online\Forms\Tournament\Uc\Icons\whitebye.png" />
+    <Content Include="Resources\ToolBarImages\TournamentIcon\2start_tournament.png" />
+    <Content Include="Resources\ToolBarImages\TournamentIcon\absent.png" />
+    <Content Include="Resources\ToolBarImages\TournamentIcon\Active.png" />
+    <Content Include="Resources\ToolBarImages\TournamentIcon\Approved.png" />
+    <Content Include="Resources\ToolBarImages\TournamentIcon\Blackbye.png" />
+    <Content Include="Resources\ToolBarImages\TournamentIcon\decline.png" />
+    <Content Include="Resources\ToolBarImages\TournamentIcon\delete.png" />
+    <Content Include="Resources\ToolBarImages\TournamentIcon\InActive.png" />
+    <Content Include="Resources\ToolBarImages\TournamentIcon\matches.png" />
+    <Content Include="Resources\ToolBarImages\TournamentIcon\new.png" />
+    <Content Include="Resources\ToolBarImages\TournamentIcon\postpone.png" />
+    <Content Include="Resources\ToolBarImages\TournamentIcon\standings.png" />
+    <Content Include="Resources\ToolBarImages\TournamentIcon\start_tournament.png" />
+    <Content Include="Resources\ToolBarImages\TournamentIcon\View.png" />
+    <Content Include="Resources\ToolBarImages\TournamentIcon\wantin.png" />
+    <Content Include="Resources\ToolBarImages\TournamentIcon\whitebye.png" />
+    <Content Include="Resources\2nd_arrow _right.ico" />
+    <Content Include="Resources\2nd_arrow_left.ico" />
+    <Content Include="Resources\analyse_the_current.ico" />
+    <Content Include="Resources\arrow_left.ico" />
+    <Content Include="Resources\arrow_right.ico" />
+    <Content Include="Resources\ask_for_an_advice.ico" />
+    <None Include="Resources\AudioChat.png" />
+    <Content Include="Resources\black.jpg" />
+    <Content Include="Resources\blitz_time_controle.ico" />
+    <Content Include="Resources\book_options.ico" />
+    <Content Include="Resources\buddy_mood.ico" />
+    <Content Include="Resources\Change board design and style.png" />
+    <Content Include="Resources\Change the main playing or first analysis engine.png" />
+    <Content Include="Resources\Change_Board_Design.ico" />
+    <Content Include="Resources\change_dimension.ico" />
+    <Content Include="Resources\change_engine.ico" />
+    <Content Include="Resources\chess-course.png" />
+    <Content Include="Resources\Find the current position in database.png" />
+    <Content Include="Resources\force engine to move.png" />
+    <None Include="Resources\HangupCall.png" />
+    <Content Include="Resources\Infinity-Chess-Logo.png" />
+    <Content Include="Resources\Input user name and info.png" />
+    <None Include="Resources\Isslogo.png" />
+    <None Include="Resources\Isslogo1.png" />
+    <Content Include="Resources\Jump to the next parallel line.png" />
+    <Content Include="Resources\Jump to the previous parallel line.png" />
+    <None Include="Resources\KSH_LOGO1.png" />
+    <Content Include="Resources\Load next game from database.png" />
+    <Content Include="Resources\Load previous game from database.png" />
+    <None Include="Resources\logo.png" />
+    <Content Include="Resources\main.ico" />
+    <Content Include="Resources\force_engine.ico" />
+    <Content Include="Resources\Infinity chess Start up screen.jpg" />
+    <Content Include="Resources\infinitychess_com.png" />
+    <Content Include="Resources\input_username&amp;information.ico" />
+    <Content Include="Resources\input_username_&amp;_information_new.ico" />
+    <Content Include="Resources\LightBrown.png" />
+    <Content Include="Resources\long_time_controler.ico" />
+    <Content Include="Resources\new_game.ICO" />
+    <Content Include="Resources\new_rated_game.ico" />
+    <None Include="Resources\NoSignal.gif" />
+    <Content Include="Resources\Offer draw to opnent.png" />
+    <Content Include="Resources\Offer draw to opnent2.png" />
+    <Content Include="Resources\offer_draw.ico" />
+    <Content Include="Resources\OnlineImages\accept.ico" />
+    <Content Include="Resources\OnlineImages\back.ico" />
+    <Content Include="Resources\OnlineImages\Center.ico" />
+    <Content Include="Resources\OnlineImages\Challenge.ico" />
+    <Content Include="Resources\OnlineImages\Chat Toolbar\Angry.png" />
+    <Content Include="Resources\OnlineImages\Chat Toolbar\Happy.png" />
+    <Content Include="Resources\OnlineImages\Chat Toolbar\kiss.png" />
+    <Content Include="Resources\OnlineImages\Chat Toolbar\laughing.png" />
+    <Content Include="Resources\OnlineImages\Chat Toolbar\Party.png" />
+    <Content Include="Resources\OnlineImages\Chat Toolbar\Question.png" />
+    <Content Include="Resources\OnlineImages\Chat Toolbar\Sad.png" />
+    <Content Include="Resources\OnlineImages\Chat Toolbar\sleep.png" />
+    <Content Include="Resources\OnlineImages\Chat Toolbar\smiley.png" />
+    <Content Include="Resources\OnlineImages\Chat Toolbar\Suprised.png" />
+    <Content Include="Resources\OnlineImages\Chat Toolbar\Unfair.png" />
+    <Content Include="Resources\OnlineImages\Chat Toolbar\Wink.png" />
+    <Content Include="Resources\OnlineImages\delete.ico" />
+    <Content Include="Resources\OnlineImages\eye.ico" />
+    <Content Include="Resources\OnlineImages\Follow.ico" />
+    <Content Include="Resources\OnlineImages\formula.ico" />
+    <Content Include="Resources\OnlineImages\forward.ico" />
+    <Content Include="Resources\OnlineImages\GameWindow\2Add_kibitze.png" />
+    <Content Include="Resources\OnlineImages\GameWindow\Add_kibitze.png" />
+    <Content Include="Resources\OnlineImages\GameWindow\Send Applause to Black.png" />
+    <Content Include="Resources\OnlineImages\GameWindow\Send Applause to white.png" />
+    <Content Include="Resources\OnlineImages\GameWindow\Stop Recieve moves.png" />
+    <Content Include="Resources\OnlineImages\GameWindow\toggle 2d 3d.png" />
+    <Content Include="Resources\OnlineImages\GameWindow\Vote for black.png" />
+    <Content Include="Resources\OnlineImages\GameWindow\Vote for white.png" />
+    <Content Include="Resources\OnlineImages\Home.ico" />
+    <Content Include="Resources\OnlineImages\join.ico" />
+    <Content Include="Resources\OnlineImages\leave.ico" />
+    <Content Include="Resources\OnlineImages\leave.png" />
+    <Content Include="Resources\OnlineImages\Modify.ico" />
+    <Content Include="Resources\OnlineImages\new.ico" />
+    <Content Include="Resources\OnlineImages\newEmail.ico" />
+    <Content Include="Resources\OnlineImages\Online Toolbar\Center.png" />
+    <Content Include="Resources\OnlineImages\Online Toolbar\change your persnol data.png" />
+    <Content Include="Resources\OnlineImages\Online Toolbar\check your account for paymen.png" />
+    <Content Include="Resources\OnlineImages\Online Toolbar\Contact server.png" />
+    <Content Include="Resources\OnlineImages\Online Toolbar\Convert time 2.png" />
+    <Content Include="Resources\OnlineImages\Online Toolbar\convert time 3.png" />
+    <Content Include="Resources\OnlineImages\Online Toolbar\convert time.png" />
+    <Content Include="Resources\OnlineImages\Online Toolbar\ELO.png" />
+    <Content Include="Resources\OnlineImages\Online Toolbar\Followtheplayer.png" />
+    <Content Include="Resources\OnlineImages\Online Toolbar\Left.png" />
+    <Content Include="Resources\OnlineImages\Online Toolbar\reconnect.png" />
+    <Content Include="Resources\OnlineImages\Online Toolbar\Right.png" />
+    <Content Include="Resources\OnlineImages\Online Toolbar\safe-icon.png" />
+    <Content Include="Resources\OnlineImages\Online Toolbar\toggle list of currently played.png" />
+    <Content Include="Resources\OnlineImages\Online Toolbar\Toggleplayerlist.png" />
+    <Content Include="Resources\OnlineImages\Online Toolbar\User Info.png" />
+    <Content Include="Resources\OnlineImages\Online Toolbar\View statics data.png" />
+    <Content Include="Resources\OnlineImages\Online Toolbar\weather.png" />
+    <Content Include="Resources\OnlineImages\picture.ico" />
+    <Content Include="Resources\OnlineImages\ping.ico" />
+    <Content Include="Resources\OnlineImages\rating.ico" />
+    <Content Include="Resources\OnlineImages\Refresh.ico" />
+    <Content Include="Resources\OnlineImages\Reply.ico" />
+    <Content Include="Resources\OnlineImages\seek.ico" />
+    <Content Include="Resources\OnlineImages\seek.png" />
+    <Content Include="Resources\OnlineImages\Show on map.ico" />
+    <Content Include="Resources\OnlineImages\Show on map2.ico" />
+    <Content Include="Resources\OnlineImages\showdaynight.ico" />
+    <Content Include="Resources\OnlineImages\Showfriends.ico" />
+    <Content Include="Resources\OnlineImages\Stop.ico" />
+    <Content Include="Resources\OnlineImages\talk.ico" />
+    <Content Include="Resources\OnlineImages\talk2.ico" />
+    <Content Include="Resources\OnlineImages\TextEditorToolbar\backcolor.bmp" />
+    <Content Include="Resources\OnlineImages\TextEditorToolbar\bold.bmp" />
+    <Content Include="Resources\OnlineImages\TextEditorToolbar\cj.bmp" />
+    <Content Include="Resources\OnlineImages\TextEditorToolbar\color.bmp" />
+    <Content Include="Resources\OnlineImages\TextEditorToolbar\fj.bmp" />
+    <Content Include="Resources\OnlineImages\TextEditorToolbar\indent.bmp" />
+    <Content Include="Resources\OnlineImages\TextEditorToolbar\italic.bmp" />
+    <Content Include="Resources\OnlineImages\TextEditorToolbar\link.bmp" />
+    <Content Include="Resources\OnlineImages\TextEditorToolbar\lj.bmp" />
+    <Content Include="Resources\OnlineImages\TextEditorToolbar\ol.bmp" />
+    <Content Include="Resources\OnlineImages\TextEditorToolbar\outdent.bmp" />
+    <Content Include="Resources\OnlineImages\TextEditorToolbar\right_arrow.bmp" />
+    <Content Include="Resources\OnlineImages\TextEditorToolbar\rj.bmp" />
+    <Content Include="Resources\OnlineImages\TextEditorToolbar\underscore.bmp" />
+    <Content Include="Resources\OnlineImages\TextEditorToolbar\uol.bmp" />
+    <Content Include="Resources\OnlineImages\toggle projection.ico" />
+    <Content Include="Resources\OnlineImages\Visit Event.ico" />
+    <Content Include="Resources\OnlineImages\Who.ico" />
+    <Content Include="Resources\OnlineImages\Zoom-In.ico" />
+    <Content Include="Resources\OnlineImages\Zoom-Out.ico" />
+    <Content Include="Resources\Open game database.png" />
+    <Content Include="Resources\Open-game-database.png" />
+    <Content Include="Resources\open_ game_database.ico" />
+    <Content Include="Resources\orange.png" />
+    <None Include="Resources\PickupCall.png" />
+    <Content Include="Resources\play-infinity-chess.png" />
+    <None Include="Resources\Play.png" />
+    <None Include="Resources\Play-Online.png" />
+    <Content Include="Resources\Quit.png" />
+    <Content Include="Resources\Red.png" />
+    <Content Include="Resources\Replace selected game in database.ico" />
+    <None Include="Resources\Replace_selected_game_in_a_database.png" />
+    <Content Include="Resources\Replay a move from the game.png" />
+    <Content Include="Resources\Resign this game - opnent wins.png" />
+    <Content Include="Resources\resign_the_game.ico" />
+    <Content Include="Resources\Retract last move and overwrite game move with the next move input.png" />
+    <Content Include="Resources\Retract last move.png" />
+    <Content Include="Resources\retract.ico" />
+    <None Include="Resources\ring.wav" />
+    <Content Include="Resources\Rotate the chess board.png" />
+    <Content Include="Resources\Rotate the chess board2.png" />
+    <Content Include="Resources\rotate.ico" />
+    <Content Include="Resources\Save a new version of this game to database.png" />
+    <Content Include="Resources\Save.ico" />
+    <None Include="Resources\Send_Applause_to_white.png" />
+    <None Include="Resources\Send_Applause_to_Black.png" />
+    <Content Include="Resources\Set players names, tournament, results etc. for this game.png" />
+    <Content Include="Resources\Set the main program option.png" />
+    <Content Include="Resources\set_ the_standard_layout.ico" />
+    <Content Include="Resources\set_the_handicap_level.ico" />
+    <Content Include="Resources\set_the_main program_options.ico" />
+    <Content Include="Resources\Start a new game.png" />
+    <None Include="Resources\Stop_Receive_moves.png" />
+    <None Include="Resources\Stop_Recieve_moves.png" />
+    <Content Include="Resources\Toggle full screen mode.png" />
+    <None Include="Resources\toggle_2d_3d.png" />
+    <Content Include="Resources\toggle_full_screen.ico" />
+    <Content Include="Resources\ToolBarImages\Change board design and style.ico" />
+    <Content Include="Resources\ToolBarImages\Change the main playing or first analysis engine.ico" />
+    <Content Include="Resources\ToolBarImages\Find the current position in database.ico" />
+    <Content Include="Resources\ToolBarImages\Force engine to move now.ico" />
+    <Content Include="Resources\ToolBarImages\Input user name and info.ico" />
+    <Content Include="Resources\ToolBarImages\Jump to the next parallel line.ico" />
+    <Content Include="Resources\ToolBarImages\Jump to the previous parallel line.ico" />
+    <Content Include="Resources\ToolBarImages\Load next game from database.ico" />
+    <Content Include="Resources\ToolBarImages\Load previous game from database.ico" />
+    <Content Include="Resources\ToolBarImages\Offer draw to opnent.ico" />
+    <Content Include="Resources\ToolBarImages\Open game database.ico" />
+    <Content Include="Resources\ToolBarImages\Replay a move from the game.ico" />
+    <Content Include="Resources\ToolBarImages\Resign this game - opnent wins.ico" />
+    <Content Include="Resources\ToolBarImages\Retract last move and overwrite game move with the next move input.ico" />
+    <Content Include="Resources\ToolBarImages\Retract last move.ico" />
+    <Content Include="Resources\ToolBarImages\Rotate the chess board.ico" />
+    <Content Include="Resources\ToolBarImages\Save a new version of this game to database.ico" />
+    <Content Include="Resources\ToolBarImages\Set players names, tournament, results etc. for this game.ico" />
+    <Content Include="Resources\ToolBarImages\Set the main program option.ico" />
+    <Content Include="Resources\ToolBarImages\Start a new game.ico" />
+    <Content Include="Resources\ToolBarImages\Toggle full screen mode.ico" />
+    <Content Include="Resources\tree.png" />
+    <Content Include="Resources\userProfile.jpg" />
+    <None Include="Resources\vote for black.png" />
+    <None Include="Resources\vote for white.png" />
+    <None Include="Resources\Vote_for_white.png" />
+    <None Include="Resources\Vote_for_black.png" />
+    <None Include="Resources\VideoChat.png" />
+    <Content Include="Resources\white.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\App.Engine\App.Engine.vcproj">
+      <Project>{FC6191D1-90B4-431E-8BE1-FD239CB8C086}</Project>
+      <Name>App.Engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\App.Model\App.Model.csproj">
+      <Project>{56A60E24-334A-414D-BE3A-CF8F1506FBC7}</Project>
+      <Name>App.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\EngineParameter\" />
+    <Folder Include="Data\Images\EngineLogo\" />
+    <Folder Include="Data\Patches\" />
+    <Folder Include="Online\Resource\Icons\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

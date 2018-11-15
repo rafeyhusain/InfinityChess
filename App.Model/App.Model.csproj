@@ -1,0 +1,1137 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{56A60E24-334A-414D-BE3A-CF8F1506FBC7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>App.Model</RootNamespace>
+    <AssemblyName>App.Model</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <SccProjectName>"%24/Projects/InfiChess/App.Model", BQCAAAAA</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ArtifexCreditCardLibrary, Version=1.0.2279.34557, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Common\ArtifexCreditCardLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="BackgroundCopyManager, Version=1.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Common\BackgroundCopyManager.DLL</HintPath>
+    </Reference>
+    <Reference Include="EO.Web, Version=7.0.50.2, Culture=neutral, PublicKeyToken=e92353a6bf73fffc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Common\EO.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="FredCK.FCKeditorV2, Version=2.6.3.22451, Culture=neutral, PublicKeyToken=4f86767c9b519a06, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Common\FredCK.FCKeditorV2.dll</HintPath>
+    </Reference>
+    <Reference Include="MACTrackBarLib, Version=1.0.2342.28161, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Common\MACTrackBarLib.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="RKLib.ExportData, Version=1.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Common\RKLib.ExportData.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WebControlCaptcha, Version=2.3.2835.30385, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\App.Web\Bin\WebControlCaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\Common\Ap\Ap.cs" />
+    <Compile Include="Model\Common\Ap\Ap.Web.cs" />
+    <Compile Include="Model\Common\Ap\ApCache.cs" />
+    <Compile Include="Model\Common\Msg\Msg.cs" />
+    <Compile Include="Model\Common\Process\HtmlParser.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\BZip2\BZip2.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\BZip2\BZip2Constants.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\BZip2\BZip2Exception.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\BZip2\BZip2InputStream.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\BZip2\BZip2OutputStream.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Checksums\Adler32.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Checksums\CRC32.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Checksums\IChecksum.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Checksums\StrangeCRC.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Core\FileSystemScanner.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Core\INameTransform.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Core\IScanFilter.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Core\NameFilter.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Core\PathFilter.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Core\StreamUtils.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Core\WindowsPathUtils.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Encryption\PkzipClassic.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Encryption\ZipAESStream.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Encryption\ZipAESTransform.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\GZip\GZIPConstants.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\GZip\GZipException.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\GZip\GzipInputStream.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\GZip\GzipOutputStream.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Lzw\LzwConstants.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Lzw\LzwException.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Lzw\LzwInputStream.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Main.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\SharpZipBaseException.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Tar\InvalidHeaderException.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Tar\TarArchive.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Tar\TarBuffer.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Tar\TarEntry.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Tar\TarException.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Tar\TarHeader.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Tar\TarInputStream.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Tar\TarOutputStream.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\Compression\Deflater.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\Compression\DeflaterConstants.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\Compression\DeflaterEngine.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\Compression\DeflaterHuffman.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\Compression\DeflaterPending.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\Compression\Inflater.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\Compression\InflaterDynHeader.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\Compression\InflaterHuffmanTree.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\Compression\PendingBuffer.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\Compression\Streams\DeflaterOutputStream.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\Compression\Streams\InflaterInputStream.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\Compression\Streams\OutputWindow.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\Compression\Streams\StreamManipulator.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\FastZip.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\IEntryFactory.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\WindowsNameTransform.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\ZipConstants.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\ZipEntry.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\ZipEntryFactory.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\ZipException.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\ZipExtraData.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\ZipFile.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\ZipHelperStream.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\ZipInputStream.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\ZipNameTransform.cs" />
+    <Compile Include="Model\Common\Util\SharpZipLib\Zip\ZipOutputStream.cs" />
+    <Compile Include="Model\Common\Util\UDate.cs" />
+    <Compile Include="Model\Common\Util\UImage.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\AccessCodes.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\BlockedIpItem.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\TournamentRounds.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\TournamentMatchRules.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\NewsCategoryItem.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\TournamentPrizes.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\ScheduledJobs.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\TournamentMatches.RoundRobin.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\TournamentMatches.Swiss.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\ServerEventLogs.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\ServerStatistics.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\RegisteredUsers.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\Teams.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\TournamentMatches.Knockout.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\TournamentMatches.Schavengen.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\TournamentTeams.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\UserMessages.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\UserFormulas.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\UserRoles.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\KeyValues.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\Events.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\RatingWinProbablities.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\RatingKFactors.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\RankRules.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\TournamentMatches.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\TournamentWantinUsers.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\TournamentUsers.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\Tournaments.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\AccessCode.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\BlockedIP.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\Contact.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\TournamentRound.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\Tournament.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\TournamentMatchRule.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\UserFini.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\NewsCategory.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\TournamentPrize.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\ScheduledJob.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\ServerStatistic.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\RegisteredUser.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\ServerEventLog.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\Team.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\TournamentTeam.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\UserVoucher.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\OrderDetail.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\Order.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\UserMessage.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\UserFormula.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\EmailTemplate.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\KeyValue.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\Engine.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\Event.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\RatingWinProbablity.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\RatingKFactor.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\RankRule.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\TournamentMatch.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\Status.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\TournamentWantinUser.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\TournamentUser.cs" />
+    <Compile Include="Model\Ui\Common\Filter\FilterItem.cs" />
+    <Compile Include="Model\Ui\Common\Filter\FilterItems.cs" />
+    <Compile Include="Model\Ui\Web\Controls\RsPanel\RsPanel.cs" />
+    <Compile Include="Model\Ui\Web\Controls\RsList\Res\RsListField1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RsListField.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\ChessBoard\ArrowUc.xaml.cs">
+      <DependentUpon>ArrowUc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\ChessBoard\Forms\PickImagePopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\ChessBoard\Forms\PickImagePopup.designer.cs">
+      <DependentUpon>PickImagePopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\MessageForm\MessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\MessageForm\MessageForm.Designer.cs">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Notation\NotationText.xaml.cs">
+      <DependentUpon>NotationText.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Notation\NotationTextView.xaml.cs">
+      <DependentUpon>NotationTextView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Game\Eco\Eco.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Engine\EngineOptions.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Game\GameEventArgs.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Game\Game.Html.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Icd\IcdManager.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Pgn\PgnManager.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Scoring\ScoringDataRow.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\MediaPlayer\MediaPlayer.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Search\GameSearch.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Search\ProgressEventArgs.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Search\ProgressWorkCompletedEventArgs.cs" />
+    <Compile Include="Model\Ui\Win\Common\Settings\UCIManager\E2EResult.cs" />
+    <Compile Include="Model\Ui\Win\Common\Settings\UCIManager\ParametersFiles.cs" />
+    <Compile Include="Model\Ui\Win\Common\Settings\UCIManager\UCIEngine.Analysis.cs" />
+    <Compile Include="Model\Ui\Win\Common\Settings\UCIManager\UCIEngine.Input.cs" />
+    <Compile Include="Model\Ui\Win\Common\Settings\UCIManager\UCIEngine.Output.cs" />
+    <Compile Include="Model\Ui\Win\Common\Settings\UCIManager\UCIEngineValidator.cs" />
+    <Compile Include="Model\Ui\Win\Common\UpdateManager\WmiHelper.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Move\MoveLog.cs" />
+    <Compile Include="Model\Ui\Win\Online\Fini\Rules.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\AvClient\Ringer.cs" />
+    <Compile Include="Model\Ui\Win\Common\Base\BaseWinForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Base\BaseWinUc.cs">
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\ChessBoard\ChessBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\ChessBoard\ChessBoard.Designer.cs">
+      <DependentUpon>ChessBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\AutoHideStripBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DockAreasEditor.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DockContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DockContentCollection.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DockContentEventArgs.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DockContentHandler.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DockOutlineBase.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DockPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DockPane.SplitterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DockPaneCaptionBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DockPaneCollection.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DockPanel.AutoHideWindow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DockPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DockPanel.DockDragHandler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DockPanel.DragHandler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DockPanel.FocusManager.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DockPanel.MdiClientController.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DockPanel.Persistor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DockPanel.SplitterDragHandler.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DockPanelExtender.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DockPanelSkin.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DockPaneStripBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DockWindow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DockWindow.SplitterControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DockWindowCollection.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DragForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\DummyControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\Enums.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\FloatWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\FloatWindowCollection.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\Helpers\DockHelper.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\Helpers\DrawHelper.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\Helpers\ResourceHelper.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\Helpers\Win32Helper.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\InertButtonBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\Interfaces.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\Localization.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\Measures.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\NestedDockingStatus.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\NestedPaneCollection.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\SplitterBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\VisibleNestedPaneCollection.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\VS2005AutoHideStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\VS2005DockPaneCaption.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\VS2005DockPaneStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\Win32\Enums.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\Docking\Win32\NativeMethods.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\IGameUc\GameUcList.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Clock\Clock.MoveTo.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Fen\Bitboard.Constant.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Game\Fen\Bitboard.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Game\Fen\Bitboard.Lookup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Game\Fen\Board.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Game\Fen\Castle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Game\Fen\Color.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Game\Fen\FEN.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Game\Fen\File.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Game\Fen\Piece.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Game\Fen\Rank.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Game\Fen\Square.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Game\Clock\Clock.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Game\Game.AddMove.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Game\Game.NewGame.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Game\Game.Engine.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Game\Game.Chessboard.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\PlayingMode\PlayingMode.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\GameFlags\GameFlags.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Move\BaseFlags.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Move\Sqaure.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Move\MoveComments.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Move\MoveFlags.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Move\Move.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Move\Moves.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Notations\NotationDataRow.cs" />
+    <Compile Include="Model\Ui\Win\Common\PaymentManager\PaymentManager.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Clipboard\Clipboard.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Game\Game.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Game\Game.GameData.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Game\Game.MoveTo.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Game\Game.Online.GameXml.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Game\Game.Online.SendData.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Game\Game.Tournament.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\GameTime\GameTime.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Pgn\PGNReader.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Scoring\Scoring.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Scoring\Scoring.Paste.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Scoring\Scoring.Data.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Scoring\Scoring.View.cs" />
+    <Compile Include="Model\Ui\Web\Controls\RsDateTimePicker\RsDateTimePicker.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\ChessBoard\BoardSquares.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\ChessBoard\ChessBoardUc.xaml.cs">
+      <DependentUpon>ChessBoardUc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\ChessBoard\ExtensionMethods.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\ChessBoard\Forms\BoardDesignPopup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\ChessBoard\Forms\BoardDesignPopup.designer.cs">
+      <DependentUpon>BoardDesignPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\ChessBoard\PiecesTheme.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Public\Docking\DockContainer.Forms.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Game\Database\GameItems.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Database\Databases.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Book\BookMove.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Book\BookMoves.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Book\Books.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Book\BookOptions.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Book\TablebasesManager.cs" />
+    <Compile Include="Model\Ui\Win\Common\Settings\OptionsManager\Options.cs" />
+    <Compile Include="Model\Ui\Win\Common\Settings\OptionsManager\OptionsBlitzClock.cs" />
+    <Compile Include="Model\Ui\Win\Common\Settings\OptionsManager\OptionsLongClock.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\PlayingMode\PlayingModeData.cs" />
+    <Compile Include="Model\Ui\Win\Common\Settings\UCIManager\EngineAnalysis.cs" />
+    <Compile Include="Model\Ui\Win\Common\Settings\UCIManager\EngineParameter.cs" />
+    <Compile Include="Model\Ui\Win\Common\UpdateManager\MsiHelper.cs" />
+    <Compile Include="Model\Ui\Win\Common\UpdateManager\UpdateEvents.cs" />
+    <Compile Include="Model\Ui\Win\Common\UpdateManager\UpdateJob.cs" />
+    <Compile Include="Model\Ui\Win\Common\UpdateManager\UpdateJobs.cs" />
+    <Compile Include="Model\Ui\Win\Common\UpdateManager\UpdateManager.cs" />
+    <Compile Include="Model\Ui\Win\Common\UpdateManager\UpdateProgress.cs" />
+    <Compile Include="Model\Ui\Win\Common\UpdateManager\UpdateUtility.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.IPs.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.Log.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.Room.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.Team.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.News.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.Tournament.Team.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.Tournament.Prize.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.Tournament.Match.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.Tournament.RegisterPlayer.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.Tournament.Wantin.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.Tournament.cs" />
+    <Compile Include="Model\Ui\Win\Online\Idle\IdleTimer.cs" />
+    <Compile Include="Model\Ui\Win\Online\Kv\BaseDataKv.cs" />
+    <Compile Include="Model\Ui\Win\Online\Kv\UserMessageDataKv.cs" />
+    <Compile Include="Model\Ui\Win\Online\Kv\UserFormulaDataKv.cs" />
+    <Compile Include="Model\Ui\Win\Online\MsgQue\MsgQueue.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\ChatClient\ChatClient.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\ChatClient\ChatMessageEventArgs.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.Email.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.Chat.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.Account.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.Audience.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.Authentication.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.Av.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.Challange.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.Game.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.GameResult.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.List.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.QueryUpgrade.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.Server.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.ServerStatistic.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.Session.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\Invoke\SocketClient.User.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Db\Db.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\Challenges.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\UserGameTypes.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\NewsItems.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\Challenge.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\UserGameType.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\News.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\Rank.cs" />
+    <Compile Include="Model\Ui\Web\Controls\RsCheckBoxList\RsCheckBoxList.cs" />
+    <Compile Include="Model\Ui\Web\Controls\RsCheckBox\RsCheckBox.cs" />
+    <Compile Include="Model\Ui\Web\Controls\RsDoubleOpt\RsDoubleOpt.cs" />
+    <Compile Include="Model\Ui\Web\Controls\RsDropDownList\RsDropDownList.cs" />
+    <Compile Include="Model\Ui\Web\Controls\RsFileUpload\RsFileUpload.cs" />
+    <Compile Include="Model\Ui\Web\Controls\RsFileViewer\RsFileViewer.cs" />
+    <Compile Include="Model\Ui\Web\Controls\RsGridView\RsGridView.cs" />
+    <Compile Include="Model\Ui\Web\Controls\RsHyperLink\RsHyperLink.cs" />
+    <Compile Include="Model\Ui\Web\Controls\RsImageButton\RsImageButton.cs" />
+    <Compile Include="Model\Ui\Web\Controls\RsLabel\RsLabel.cs" />
+    <Compile Include="Model\Ui\Web\Controls\RsList\Res\RsListItem1.Designer.cs">
+      <DependentUpon>RsListItem.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Model\Ui\Web\Controls\RsList\RsList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Web\Controls\RsList\RsListField.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Web\Controls\RsList\RsListFields.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Web\Controls\RsList\RsListItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Web\Controls\RsList\RsListItems.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Web\Controls\RsMail\RsMail.cs" />
+    <Compile Include="Model\Ui\Web\Controls\RsRadioButtonList\RsRadioButtonList.cs" />
+    <Compile Include="Model\Ui\Web\Controls\RsRadioButton\RsRadioButton.cs" />
+    <Compile Include="Model\Ui\Web\Controls\RsRichTextBox\RsRichTextBox.cs" />
+    <Compile Include="Model\Ui\Web\Controls\RsTextArea\RsTextArea.cs" />
+    <Compile Include="Model\Ui\Web\Controls\RsTextBox\RsTextBox.cs" />
+    <Compile Include="Model\Ui\Web\Controls\RsToolbar\RsToolbar.cs" />
+    <Compile Include="Model\Ui\Web\Controls\RsYearCombo\RsYearCombo.cs" />
+    <Compile Include="Model\Ui\Web\Kv\NewsItemKv.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Board\Board.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\CapturedPieces\CapturedPieces.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\CapturedPieces\CapturedPieces.MoveTo.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\ChessBoard\Forms\frmSelectPiecePromotion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\ChessBoard\Forms\frmSelectPiecePromotion.Designer.cs">
+      <DependentUpon>frmSelectPiecePromotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\ControlCollections\DockableContainerControlCollection.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\ControlCollections\FormsContainerControlCollection.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\ControlCollections\FormsDecoratorControlCollection.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\ControlCollections\FormsTabbedViewControlCollection.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\AutohideButtonsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\AutohidePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockableContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\ButtonToDockBottom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\ButtonToDockBottom.Designer.cs">
+      <DependentUpon>ButtonToDockBottom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\ButtonToDockLeft.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\ButtonToDockLeft.Designer.cs">
+      <DependentUpon>ButtonToDockLeft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\ButtonToDockRight.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\ButtonToDockRight.Designer.cs">
+      <DependentUpon>ButtonToDockRight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\ButtonToDockUp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\ButtonToDockUp.Designer.cs">
+      <DependentUpon>ButtonToDockUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\CenterButtonToDockBottom.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\CenterButtonToDockBottom.Designer.cs">
+      <DependentUpon>CenterButtonToDockBottom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\CenterButtonToDockFill.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\CenterButtonToDockFill.Designer.cs">
+      <DependentUpon>CenterButtonToDockFill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\CenterButtonToDockLeft.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\CenterButtonToDockLeft.Designer.cs">
+      <DependentUpon>CenterButtonToDockLeft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\CenterButtonToDockRight.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\CenterButtonToDockRight.Designer.cs">
+      <DependentUpon>CenterButtonToDockRight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\CenterButtonToDockUp.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\CenterButtonToDockUp.Designer.cs">
+      <DependentUpon>CenterButtonToDockUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\FormsContainer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\FormsDecorator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\FormsTabbedView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\Forms\DockPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\Forms\DockPreview.Designer.cs">
+      <DependentUpon>DockPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\OwnerDrawPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\PreviewPane.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Engine\Autohide.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Engine\DockGuider.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Engine\DockLayout.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Engine\FormsDocker.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Enums\zSizeMode.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\EventArgs\ControlSwitchedEventArgs.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\EventArgs\DockControlEventArgs.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\EventArgs\InvalidateEventArgs.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\EventArgs\PreviewEventArgs.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\EventArgs\TemplateEventArgs.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Helpers\CenterDockButtons.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Helpers\Command.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Helpers\ControlPositioner.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Helpers\DefaultFormsSelector.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Helpers\DockGuiderWrapper.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Helpers\EnumUtility.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Helpers\FocusFilter.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Helpers\FormWrapper.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Helpers\Globals.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Helpers\GuidedDockResult.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Helpers\HierarchyUtility.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Helpers\InnerDockPreviewEngine.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Helpers\MarginDockButtons.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Helpers\OuterDockPreviewEngine.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Helpers\SelectableFormsInfo.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Helpers\TitleBarRenderer.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\SharedHelpers\Disposable.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\SharedHelpers\GraphicsUtility.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Public\Docking\DockContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Public\Docking\Enums\zAllowedDock.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Public\Docking\Enums\zDockMode.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Public\Docking\EventArgs\DockableFormClosingEventArgs.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Public\Docking\EventArgs\FormContextMenuEventArgs.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Public\Docking\EventArgs\FormEventArgs.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Public\Docking\Helpers\DockableFormInfo.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Public\Docking\Helpers\DockStateSerializer.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Public\Docking\Helpers\FormsSelector.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Public\Docking\Renderers\PreviewRenderer.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Public\TabbedDocument\Controls\ButtonsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Public\TabbedDocument\Controls\ButtonsPanel.Designer.cs">
+      <DependentUpon>ButtonsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Public\TabbedDocument\Controls\TabbedView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Public\TabbedDocument\Controls\TabbedView.Designer.cs">
+      <DependentUpon>TabbedView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Public\TabbedDocument\Controls\TabPageView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Public\TabbedDocument\Controls\TabPageView.Designer.cs">
+      <DependentUpon>TabPageView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Public\TabbedDocument\Enums\zButtonState.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Public\TabbedDocument\Helpers\TabButton.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Public\TabbedDocument\Renderers\Base\TabButtonRenderer.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Public\TabbedDocument\Renderers\BottomTabButtonRenderer.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Public\TabbedDocument\Renderers\LeftTabButtonRenderer.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Public\TabbedDocument\Renderers\RightTabButtonRenderer.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Public\TabbedDocument\Renderers\TopTabButtonRenderer.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Res\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Wrapper\DockPanel.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Wrapper\DockWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\DockWindow\Res\XmlTags.Designer.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\IGameUc\IGameUc.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Notations\Notations.Paste.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Notations\Notations.MoveTo.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Notations\Notations.View.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Notations\Notations.Data.cs" />
+    <Compile Include="Model\Common\Ap\Ap.Path.cs" />
+    <Compile Include="Model\Common\Util\UXml.cs" />
+    <Compile Include="Model\Common\Util\UZip.cs" />
+    <Compile Include="Model\Common\Util\UMail.cs" />
+    <Compile Include="Model\Common\Util\UProcess.cs" />
+    <Compile Include="Model\Common\Exception\AppException.cs" />
+    <Compile Include="Model\Db\Common\Base\Items\BaseCollection.cs" />
+    <Compile Include="Model\Db\Common\Base\Items\BaseItems.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\Db\Common\Base\Items\IBaseItems.cs" />
+    <Compile Include="Model\Db\Common\Base\Item\BaseItem.cs" />
+    <Compile Include="Model\Db\Common\Base\List\BaseList.cs" />
+    <Compile Include="Model\Common\Process\BaseProcess.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\NearestCities.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\Countries.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\Rooms.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\Games.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Items\Users.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\Game.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\NearestCity.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\Country.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\Log.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\Room.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\UserRole.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\DockingManager\DockManager.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\FullScreen\FullScreen.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\FullScreen\HandleTaskBar.cs" />
+    <Compile Include="Model\Ui\Win\Common\Help\InfinityChessHelp.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\Resolution\Resolution.cs" />
+    <Compile Include="Model\Db\Kv\Kv.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Notations\Notations.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Scoring\Scoring.MoveTo.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\ScreenShot\ScreenShot.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Book\Book.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Database\GameItem.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Book\Book.MoveTo.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Database\Database.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Book\GameData.cs" />
+    <Compile Include="Model\Ui\Win\Common\Settings\Constants\Constants.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Engine\Engine.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Engine\EngineManager.cs" />
+    <Compile Include="Model\Ui\Win\Common\Game\Engine\EngineParameters.cs" />
+    <Compile Include="Model\Ui\Win\Common\Settings\GameManager\Player.cs" />
+    <Compile Include="Model\Ui\Win\Common\Settings\GameManager\UserProfile.cs" />
+    <Compile Include="Model\Ui\Win\Common\Settings\Notations\MoveVariation.cs" />
+    <Compile Include="Model\Ui\Win\Common\Settings\OptionsManager\OptionsSetupsReader.cs" />
+    <Compile Include="Model\Ui\Win\Common\Settings\Settings.cs" />
+    <Compile Include="Model\Ui\Win\Common\Settings\Streams\InfinityReader.cs" />
+    <Compile Include="Model\Ui\Win\Common\Settings\Streams\InfinityStreamsManager.cs" />
+    <Compile Include="Model\Ui\Win\Common\Settings\Streams\InfinityWriter.cs" />
+    <Compile Include="Model\Ui\Win\Common\Settings\Test\TestDebugger.cs" />
+    <Compile Include="Model\Ui\Win\Common\Settings\UCIManager\UCIEngine.cs" />
+    <Compile Include="Model\Ui\Win\Common\Settings\UCIManager\UCIEventArgs.cs" />
+    <Compile Include="Model\Ui\Web\Root\WebApp.cs" />
+    <Compile Include="Model\Ui\Web\Base\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Web\Base\BaseUc.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Web\Base\BaseControlUc.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Root\Config.cs" />
+    <Compile Include="Model\Db\Helper\SqlHelper.cs" />
+    <Compile Include="Model\Common\Util\URegEx.cs" />
+    <Compile Include="Model\Common\Util\UCrypto.cs" />
+    <Compile Include="Model\Common\Util\UData.cs" />
+    <Compile Include="Model\Common\Util\UFile.cs" />
+    <Compile Include="Model\Common\Util\UStr.cs" />
+    <Compile Include="Model\Common\Util\UWeb.cs" />
+    <Compile Include="Model\Ui\Web\Base\BaseMasterPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Web\Cxt\CxtParam.cs" />
+    <Compile Include="Model\Ui\Web\Cxt\Cxt.cs" />
+    <Compile Include="Model\Db\Helper\DbHelper.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\User.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\Task.cs" />
+    <Compile Include="Model\Db\MsSql\InfiChess\Item\Role.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\ChessBoard\AttackingPieces.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\ChessBoard\BitBoardSquare.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\ChessBoard\Chess.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\ChessBoard\ChessInterfaces.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\ChessBoard\ChessMove.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\ChessBoard\ChessPosition.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\ChessBoard\FenParser.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\ChessBoard\GameNavigation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Model\Ui\Win\Common\Controls\ChessBoard\PgnNotation.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\ChessBoard\MoveValidator.cs" />
+    <Compile Include="Model\Ui\Win\Common\Controls\ChessBoard\SquareItem.cs" />
+    <Compile Include="Model\Ui\Win\Online\Kv\ChallengeDataKv.cs" />
+    <Compile Include="Model\Ui\Win\Online\Kv\GameDataKv.cs" />
+    <Compile Include="Model\Ui\Win\Online\Kv\CountryKv.cs" />
+    <Compile Include="Model\Ui\Win\Online\Kv\UserDataKv.cs" />
+    <Compile Include="Model\Ui\Win\Online\Rating\UserElo.cs" />
+    <Compile Include="Model\Ui\Win\Online\Rating\Elo.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\SocketClient\SocketClient.cs" />
+    <Compile Include="Model\Ui\Win\Online\GameClient\UserSession\UserSession.cs" />
+    <Compile Include="Model\Ui\Win\Online\SwissEngine\Core\SwissEngine.cs" />
+    <Compile Include="Model\Ui\Win\Online\SwissEngine\Db\DBase3.cs" />
+    <Compile Include="Model\Ui\Win\Online\SwissEngine\Db\DBase3Record.cs" />
+    <Compile Include="Model\Ui\Win\Online\SwissEngine\Db\SimpleDB.cs" />
+    <Compile Include="Model\Ui\Win\Online\SwissEngine\Pairings\Card.cs" />
+    <Compile Include="Model\Ui\Win\Online\SwissEngine\Pairings\Engine.cs" />
+    <Compile Include="Model\Ui\Win\Online\SwissEngine\Pairings\Pairing.cs" />
+    <Compile Include="Model\Ui\Win\Online\SwissEngine\Pairings\Player.cs" />
+    <Compile Include="Model\Ui\Win\Online\SwissEngine\Pairings\PlayerMap.cs" />
+    <Compile Include="Model\Ui\Win\Online\SwissEngine\Pairings\Round.cs" />
+    <Compile Include="Model\Ui\Win\Online\SwissEngine\Pairings\SortedArrayList.cs" />
+    <Compile Include="Model\Ui\Win\Online\SwissEngine\Pairings\Tournament.cs" />
+    <Compile Include="Model\Ui\Win\Online\SwissEngine\Pairings\TournamentSection.cs" />
+    <Compile Include="Model\Ui\Win\Online\SwissEngine\Util\Comparitor.cs" />
+    <Compile Include="Model\Ui\Win\Online\SwissEngine\Util\HeapSort.cs" />
+    <Compile Include="Model\Ui\Win\Online\SwissEngine\Util\MutableInteger.cs" />
+    <Compile Include="Model\Ui\Win\Online\SwissEngine\Util\SupportClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Kv.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Kv.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Model\Docs\PS.Script.sql" />
+    <None Include="Model\Docs\DS.Script.sql" />
+    <Content Include="Model\Common\Util\SharpZipLib\obj\Debug\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="Model\Common\Util\SharpZipLib\obj\Debug\ICSharpCode.SharpZipLib.pdb" />
+    <Content Include="Model\Common\Util\SharpZipLib\obj\Debug\ICSharpCode.SharpZLib.csproj.FileListAbsolute.txt" />
+    <Content Include="Model\Docs\TODO.txt" />
+    <Content Include="Model\Ui\Web\Controls\RsFileUpload\Res\bc.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileUpload\Res\bd.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileUpload\Res\be.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileUpload\Res\bs.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\bmp.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\doc.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\docx.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\exe.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\gif.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\hlp.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\img.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\jpg.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\lnk.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\mdb.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\mdf.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\msg.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\msi.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\ni.jpg" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\nis.jpg" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\pdf.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\pic.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\png.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\ppt.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\ra.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\rar.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\reg.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\rtf.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\tif.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\txt.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\wmv.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\xls.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsFileViewer\Res\_f.ico" />
+    <Content Include="Model\Ui\Web\Controls\RsGridView\Res\JScript.js" />
+    <Content Include="Model\Ui\Web\Controls\RsList\Res\Script.js" />
+    <Content Include="Model\Ui\Web\Controls\RsTextBox\Res\Script.js" />
+    <Content Include="Model\Ui\Win\Common\Controls\Docking\DockPanel.bmp" />
+    <Content Include="Model\Ui\Win\Common\Controls\Docking\Resources\DockIndicator_PaneDiamond.bmp" />
+    <Content Include="Model\Ui\Win\Common\Controls\Docking\Resources\DockIndicator_PaneDiamond_Bottom.bmp" />
+    <Content Include="Model\Ui\Win\Common\Controls\Docking\Resources\Dockindicator_PaneDiamond_Fill.bmp" />
+    <Content Include="Model\Ui\Win\Common\Controls\Docking\Resources\DockIndicator_PaneDiamond_Hotspot.bmp" />
+    <Content Include="Model\Ui\Win\Common\Controls\Docking\Resources\DockIndicator_PaneDiamond_HotspotIndex.bmp" />
+    <Content Include="Model\Ui\Win\Common\Controls\Docking\Resources\DockIndicator_PaneDiamond_Left.bmp" />
+    <Content Include="Model\Ui\Win\Common\Controls\Docking\Resources\DockIndicator_PaneDiamond_Right.bmp" />
+    <Content Include="Model\Ui\Win\Common\Controls\Docking\Resources\DockIndicator_PaneDiamond_Top.bmp" />
+    <Content Include="Model\Ui\Win\Common\Controls\Docking\Resources\DockIndicator_PanelBottom.bmp" />
+    <Content Include="Model\Ui\Win\Common\Controls\Docking\Resources\DockIndicator_PanelBottom_Active.bmp" />
+    <Content Include="Model\Ui\Win\Common\Controls\Docking\Resources\DockIndicator_PanelFill.bmp" />
+    <Content Include="Model\Ui\Win\Common\Controls\Docking\Resources\DockIndicator_PanelFill_Active.bmp" />
+    <Content Include="Model\Ui\Win\Common\Controls\Docking\Resources\DockIndicator_PanelLeft.bmp" />
+    <Content Include="Model\Ui\Win\Common\Controls\Docking\Resources\DockIndicator_PanelLeft_Active.bmp" />
+    <Content Include="Model\Ui\Win\Common\Controls\Docking\Resources\DockIndicator_PanelRight.bmp" />
+    <Content Include="Model\Ui\Win\Common\Controls\Docking\Resources\DockIndicator_PanelRight_Active.bmp" />
+    <Content Include="Model\Ui\Win\Common\Controls\Docking\Resources\DockIndicator_PanelTop.bmp" />
+    <Content Include="Model\Ui\Win\Common\Controls\Docking\Resources\DockIndicator_PanelTop_Active.bmp" />
+    <Content Include="Model\Ui\Win\Common\Controls\Docking\Resources\DockPane_AutoHide.bmp" />
+    <Content Include="Model\Ui\Win\Common\Controls\Docking\Resources\DockPane_Close.bmp" />
+    <Content Include="Model\Ui\Win\Common\Controls\Docking\Resources\DockPane_Dock.bmp" />
+    <Content Include="Model\Ui\Win\Common\Controls\Docking\Resources\DockPane_Option.bmp" />
+    <Content Include="Model\Ui\Win\Common\Controls\Docking\Resources\DockPane_OptionOverflow.bmp" />
+    <Content Include="Model\Ui\Win\Common\Controls\DockWindow\Res\Dock16x16.bmp" />
+    <Content Include="Model\Ui\Win\Offline\TODO.txt" />
+    <EmbeddedResource Include="Model\Ui\Win\Common\Base\BaseWinForm.resx">
+      <DependentUpon>BaseWinForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Ui\Win\Common\Controls\ChessBoard\ChessBoard.resx">
+      <DependentUpon>ChessBoard.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Ui\Win\Common\Controls\ChessBoard\Forms\BoardDesignPopup.resx">
+      <DependentUpon>BoardDesignPopup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Ui\Win\Common\Controls\ChessBoard\Forms\frmSelectPiecePromotion.resx">
+      <DependentUpon>frmSelectPiecePromotion.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Ui\Win\Common\Controls\ChessBoard\Forms\PickImagePopup.resx">
+      <DependentUpon>PickImagePopup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Ui\Win\Common\Controls\ChessBoard\GameNavigation.resx">
+      <DependentUpon>GameNavigation.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Ui\Win\Common\Controls\Docking\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Ui\Win\Common\Controls\Docking\Strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\ButtonToDockBottom.resx">
+      <DependentUpon>ButtonToDockBottom.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\ButtonToDockLeft.resx">
+      <DependentUpon>ButtonToDockLeft.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\ButtonToDockRight.resx">
+      <DependentUpon>ButtonToDockRight.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\ButtonToDockUp.resx">
+      <DependentUpon>ButtonToDockUp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\CenterButtonToDockBottom.resx">
+      <DependentUpon>CenterButtonToDockBottom.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\CenterButtonToDockFill.resx">
+      <DependentUpon>CenterButtonToDockFill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\CenterButtonToDockLeft.resx">
+      <DependentUpon>CenterButtonToDockLeft.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\CenterButtonToDockRight.resx">
+      <DependentUpon>CenterButtonToDockRight.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\DockButtons\CenterButtonToDockUp.resx">
+      <DependentUpon>CenterButtonToDockUp.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Ui\Win\Common\Controls\DockWindow\Internal\Docking\Controls\Forms\DockPreview.resx">
+      <DependentUpon>DockPreview.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Ui\Win\Common\Controls\DockWindow\Public\TabbedDocument\Controls\ButtonsPanel.resx">
+      <DependentUpon>ButtonsPanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Ui\Win\Common\Controls\DockWindow\Public\TabbedDocument\Controls\TabbedView.resx">
+      <DependentUpon>TabbedView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Ui\Win\Common\Controls\DockWindow\Public\TabbedDocument\Controls\TabPageView.resx">
+      <DependentUpon>TabPageView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Ui\Win\Common\Controls\DockWindow\Res\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Ui\Win\Common\Controls\DockWindow\Res\XmlTags.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Model\Ui\Win\Common\Controls\MessageForm\MessageForm.resx">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Model\Ui\Web\Controls\RsDoubleOpt\RsDoubleOpt.sql" />
+    <None Include="Model\Ui\Web\Controls\RsList\Res\RsListField.xsc">
+      <DependentUpon>RsListField.xsd</DependentUpon>
+    </None>
+    <None Include="Model\Ui\Web\Controls\RsList\Res\RsListField.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RsListField1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Model\Ui\Web\Controls\RsList\Res\RsListItem.xsc">
+      <DependentUpon>RsListItem.xsd</DependentUpon>
+    </None>
+    <None Include="Model\Ui\Web\Controls\RsList\Res\RsListItem.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RsListItem1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Model\Ui\Web\Controls\RsList\Res\RsListItem.xss">
+      <DependentUpon>RsListItem.xsd</DependentUpon>
+    </None>
+    <None Include="Model\Ui\Win\Online\GameClient\AvClient\Flash\Av.fla" />
+    <None Include="Model\Ui\Win\Common\Controls\Docking\Resources\Thumbs.db" />
+    <None Include="Resources\Kv.xsc">
+      <DependentUpon>Kv.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\Kv.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Kv.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\Kv.xss">
+      <DependentUpon>Kv.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\white.jpg" />
+    <None Include="Resources\black.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Model\Ui\Win\Common\Controls\ChessBoard\ChessBoardUc.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Model\Ui\Win\Common\Controls\ChessBoard\ArrowUc.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Model\Ui\Win\Common\Controls\Notation\NotationText.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Model\Ui\Win\Common\Controls\Notation\NotationTextView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\App.Engine\App.Engine.vcproj">
+      <Project>{FC6191D1-90B4-431E-8BE1-FD239CB8C086}</Project>
+      <Name>App.Engine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\Common\Util\SharpZipLib\obj\Debug\TempPE\" />
+    <Folder Include="Model\Common\Util\SharpZipLib\obj\Release\TempPE\" />
+    <Folder Include="Model\Db\MsSql\InfiChess\Process\" />
+    <Folder Include="Model\Docs\Dotfuscated\" />
+    <Folder Include="Model\Ui\Web\Controls\RsDateTimePicker\Res\" />
+    <Folder Include="Model\Ui\Web\Controls\RsToolbar\Res\" />
+    <Folder Include="Model\Ui\Win\Common\Settings\Files\" />
+    <Folder Include="Model\Ui\Win\Online\Connection\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

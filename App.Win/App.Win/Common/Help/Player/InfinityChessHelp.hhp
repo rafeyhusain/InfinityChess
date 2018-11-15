@@ -1,0 +1,82 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=InfinityChessHelp.chm
+Contents file=Table of Contents.hhc
+Default Window=Help
+Default topic=BlitzClockForm.html
+Display compile progress=No
+Index file=Index.hhk
+Language=0x409 English (United States)
+
+[WINDOWS]
+Help=,"Table of Contents.hhc","Index.hhk","BlitzClockForm.html",,,,,,0x23520,,0x3006,,,,,,,,0
+
+
+[FILES]
+BlitzClockForm.html
+BookOptionsPopup.html
+ChallangeWindow.html
+ConvertFilesPopup.html
+DatabaseForm.html
+EngineVsEngineMatch.html
+EnterMoveText.html
+ForgetPasswordForm.html
+frmGameData.html
+ImportGameEditor.html
+LoadEngine.html
+LongClockForm.html
+OptionsPopup.html
+PlayingMode.html
+PositionSetup.html
+RatedGameResult.html
+Seek.html
+SetupUCIEngine.html
+Tournament.html
+UserData.html
+UserInfo.html
+Formula.html
+BoardDesign.html
+TournamentDirectorManual.htm
+PlayerManual.htm
+Login.html
+KnockOutTournament.htm
+Schevengentournamentmanuall.htm
+TournamentData.html
+News.html
+Room.htm
+Team.htm
+
+[ALIAS]
+BlitzClockForm=BlitzClockForm.html
+BoardDesign=BoardDesign.html
+BookOptionsPopup=BookOptionsPopup.html
+ChallangeWindow=ChallangeWindow.html
+convertFilePopup=ConvertFilesPopup.html
+DatabaseForm=DatabaseForm.html
+EngineVsEngine=EngineVsEngineMatch.html
+EnterMoveText=EnterMoveText.html
+ForgetPasswordForm=ForgetPasswordForm.html
+Formula=Formula.html
+frmGameData=frmGameData.html
+frmTournamentData=TournamentData.html
+ImportGameEditor=ImportGameEditor.html
+LoadEngine=LoadEngine.html
+LongClockForm=LongClockForm.html
+NewsDetail=News.html
+OptionsPopup=OptionsPopup.html
+PlayingMode=PlayingMode.html
+PositionSetup=PositionSetup.html
+RatedGameResult=RatedGameResult.html
+RoomDetail=Room.htm
+Seek=Seek.html
+SetupUCIEngine=SetupUCIEngine.html
+TeamDetail=Team.htm
+Tournament=Tournament.html
+UserData=UserData.html
+UserInfo=UserInfo.html
+
+[MAP]
+#include TopicID.h
+
+[INFOTYPES]
+

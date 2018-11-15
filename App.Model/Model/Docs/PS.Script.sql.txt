@@ -1,0 +1,301 @@
+
+
+CREATE TABLE dbo.TournamentStatus(
+	TournamentStatusID int IDENTITY(1,1) NOT NULL,
+	Name varchar(600) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	Value ntext COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+	Description ntext COLLATE SQL_Latin1_General_CP1_CI_AS NULL,
+	CreatedBy int NULL,
+	DateCreated datetime NULL,
+	ModifiedBy int NULL,
+	DateModified datetime NULL
+)
+go
+
+alter table tournament
+add TournamentStatusID int
+go
+alter table tournament
+ADD CONSTRAINT FK_TournamentMatchStatus_Tournament FOREIGN KEY (TournamentStatusID)
+    REFERENCES tournament (TournamentStatusID) ;
+go
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[GetTournamentMatchByTournamentID]
+
+@TournamentID int
+
+as
+
+declare @GametypeID int
+declare @ChessTypeId int
+set @GametypeID = 0
+set @ChessTypeId = 0
+
+select @GametypeID = GameTypeID, @ChessTypeId = ChessTypeId from Tournament where tournamentid = @TournamentID
+
+select 
+	tm.TournamentMatchID,
+	tm.TournamentID,
+	tm.WhiteUserID,
+	tm.BlackUserID,
+	tm.MatchStartDate,
+	tm.MatchStartTime,
+	tm.TournamentMatchStatusID,
+	tm.CreatedBy,
+	tm.DateCreated,
+	tm.Round Round,
+	Player1 = (select username from [user] u where u.userid = tm.WhiteUserID),
+	Player2 = (select username from [user] u where u.userid = tm.BlackUserID),
+	TournamentMatchStatus = 		(select [name] from TournamentMatchStatus tms 
+				where tms.TournamentMatchStatusID = tm.TournamentMatchStatusID),
+	WRating = isnull((select elorating from usergametype gt where userid = tm.WhiteUserID 
+						and gametypeID = @GametypeID and ChessTypeID=@ChessTypeId),0),
+	BRating = isnull((select elorating from usergametype gt where userid = tm.BlackUserID 
+						and gametypeID = @GametypeID and ChessTypeID=@ChessTypeId),0),
+	WRank = (select r.name from rank r inner join [user] u on r.rankid = u.humanrankid 
+														where u.userid = tm.WhiteUserID),
+	BRank = (select r.name from rank r inner join [user] u on r.rankid = u.humanrankid
+														where u.userid = tm.BlackUserID),
+	t.RoomID,
+	RoomName = (select Name from room r where r.roomid = t.RoomID),
+	t.TimeControlMin,
+	t.TimeControlSec,
+	GameResultID = (select top 1 GameResultID from 
+                      dbo.Game where tm.TournamentMatchID = dbo.Game.TournamentMatchID
+					order by gameid asc	),
+	t.TournamentTypeID,
+	TournamentMatchStatus = (select Name from tournamentmatchstatus 
+								where Tournamentmatchstatusid = t.tournamentmatchstatusid)
+	from TournamentMatch tm 
+	inner join Tournament t on t.TournamentID = tm.TournamentID
+	    
+
+where t.tournamentid = @TournamentID
+and tm.ParentMatchID is null
+
+
+
+
+/*
+
+create by arsalan ata on 05 july 2010
+*/
+go
+alter table Tournament
+add IsTieBreak bit
+go
+
+insert into tournamentstatus (name) values('Scheduled')
+insert into tournamentstatus (name) values('In Progress')
+insert into tournamentstatus (name) values('Finsihed')
+
+go
+
+
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		Ubaid-ur-Rehman
+-- Create date: 10 march 10
+-- Description:	Tournament Result
+-- GetTournamentResultByTournamentID 0
+-- =============================================
+ALTER PROCEDURE [dbo].[GetTournamentResultByTournamentID] 
+	-- Add the parameters for the stored procedure here
+	@TournamentID int = 0
+
+AS
+
+SELECT   ROW_NUMBER()over (order by TournamentPoints desc) as Rank,
+		[User].UserID,UserName,EloBefore,EloAfter,TournamentPoints, 
+isnull([user].CountryID,244) as CountryID,
+c.Name CountryName,
+tournamentuser.TeamID,
+TeamName = (select teamname from team where teamid = tournamentuser.teamid)			
+
+FROM         dbo.TournamentUser INNER JOIN
+                      dbo.[User] ON dbo.TournamentUser.UserID = dbo.[User].UserID
+left join country c on c.countryid = [User].countryid
+where      TournamentID =@TournamentID
+order by TournamentPoints desc
+
+SELECT     TournamentID,ROW_NUMBER()over (order by TournamentMatchID) as CNo, 
+			WhiteUserID, BlackUserID, GameResultID,[Round],
+(select max([Round]) from  dbo.TournamentMatch where TournamentID =@TournamentID)as NoR
+
+FROM       dbo.TournamentMatch
+
+where      TournamentID =@TournamentID
+
+select ROW_NUMBER()over (order by teamid) as Rank, 
+sum(tournamentpoints) Rating,  
+TeamID, TeamName from (
+SELECT   EloBefore,EloAfter,TournamentPoints, 
+tournamentuser.TeamID,
+TeamName = (select teamname from team where teamid = tournamentuser.teamid)
+
+FROM         dbo.TournamentUser INNER JOIN
+                      dbo.[User] ON dbo.TournamentUser.UserID = dbo.[User].UserID
+where      TournamentID = @TournamentID ) tbl
+group by teamid, teamname
+
+--order by MatchStartDate,MatchStartTime,TournamentMatchID 
+
+
+go
+
+
+/*
+Below script is updated by arsalan ata on 08 july 2010
+*/
+GO
+/****** Object:  Table [dbo].[TournamentPrize]    Script Date: 07/08/2010 16:47:36 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[TournamentPrize](
+	[TournamentPrizeID] [int] IDENTITY(1,1) NOT NULL,
+	[TournamentID] [int] NULL,
+	[PrizeAmount] [money] NULL,
+	[PrizePosition] [int] NULL,
+	[TournamentPrizeCategoryID] [int] NULL,
+	[CreatedBy] [int] NULL,
+	[DateCreated] [datetime] NULL,
+	[ModifiedBy] [int] NULL,
+	[DateModified] [datetime] NULL,
+ CONSTRAINT [PK_TournamentPrize] PRIMARY KEY CLUSTERED 
+(
+	[TournamentPrizeID] ASC
+)WITH (PAD_INDEX  = OFF, IGNORE_DUP_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+ALTER TABLE [dbo].[TournamentPrize]  WITH CHECK ADD  CONSTRAINT [FK_TournamentPrize_TournamentPrizeCategory] FOREIGN KEY([TournamentPrizeCategoryID])
+REFERENCES [dbo].[TournamentPrizeCategory] ([TournamentPrizeCategoryID])
+GO
+ALTER TABLE [dbo].[TournamentPrize] CHECK CONSTRAINT [FK_TournamentPrize_TournamentPrizeCategory]
+GO
+ALTER TABLE [dbo].[TournamentPrize]  WITH CHECK ADD  CONSTRAINT [FK_TournamentPrize_User] FOREIGN KEY([CreatedBy])
+REFERENCES [dbo].[User] ([UserID])
+GO
+ALTER TABLE [dbo].[TournamentPrize] CHECK CONSTRAINT [FK_TournamentPrize_User]
+GO
+ALTER TABLE [dbo].[TournamentPrize]  WITH CHECK ADD  CONSTRAINT [FK_TournamentPrize_User1] FOREIGN KEY([ModifiedBy])
+REFERENCES [dbo].[User] ([UserID])
+GO
+ALTER TABLE [dbo].[TournamentPrize] CHECK CONSTRAINT [FK_TournamentPrize_User1]
+
+
+go
+
+
+USE [InfiChess]
+GO
+/****** Object:  Table [dbo].[TournamentPrizeCategory]    Script Date: 07/08/2010 16:47:48 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[TournamentPrizeCategory](
+	[TournamentPrizeCategoryID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](600) COLLATE Latin1_General_CS_AI NOT NULL,
+	[Description] [ntext] COLLATE Latin1_General_CS_AI NULL,
+	[CreatedBy] [int] NULL,
+	[DateCreated] [datetime] NULL,
+	[ModifiedBy] [int] NULL,
+	[DateModified] [datetime] NULL,
+ CONSTRAINT [PK_TournamentPrizeCategory] PRIMARY KEY CLUSTERED 
+(
+	[TournamentPrizeCategoryID] ASC
+)WITH (PAD_INDEX  = OFF, IGNORE_DUP_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+ALTER TABLE [dbo].[TournamentPrizeCategory]  WITH CHECK ADD  CONSTRAINT [FK_TournamentPrizeCategory_User] FOREIGN KEY([CreatedBy])
+REFERENCES [dbo].[User] ([UserID])
+GO
+ALTER TABLE [dbo].[TournamentPrizeCategory] CHECK CONSTRAINT [FK_TournamentPrizeCategory_User]
+GO
+ALTER TABLE [dbo].[TournamentPrizeCategory]  WITH CHECK ADD  CONSTRAINT [FK_TournamentPrizeCategory_User1] FOREIGN KEY([ModifiedBy])
+REFERENCES [dbo].[User] ([UserID])
+GO
+ALTER TABLE [dbo].[TournamentPrizeCategory] CHECK CONSTRAINT [FK_TournamentPrizeCategory_User1]
+
+
+go
+
+
+insert into tournamentprizecategory (Name) values ('Infini')
+insert into tournamentprizecategory (Name) values ('Euro')
+insert into tournamentprizecategory (Name) values ('Dollar')
+
+
+go
+
+
+set ANSI_NULLS ON
+set QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		Ubaid-ur-Rehman
+-- Create date: 10 march 10
+-- Description:	Tournament Result
+-- GetTournamentResultByTournamentID 0
+-- =============================================
+ALTER PROCEDURE [dbo].[GetTournamentResultByTournamentID] 
+	-- Add the parameters for the stored procedure here
+	@TournamentID int = 0
+
+AS
+
+SELECT   ROW_NUMBER()over (order by TournamentPoints desc) as Rank,
+		[User].UserID,UserName,EloBefore,EloAfter,TournamentPoints, 
+isnull([user].CountryID,244) as CountryID,
+c.Name CountryName,
+tournamentuser.TeamID,
+TeamName = (select teamname from team where teamid = tournamentuser.teamid)			
+
+FROM         dbo.TournamentUser INNER JOIN
+                      dbo.[User] ON dbo.TournamentUser.UserID = dbo.[User].UserID
+left join country c on c.countryid = [User].countryid
+where      TournamentID =@TournamentID
+order by TournamentPoints desc
+
+SELECT     TournamentID,ROW_NUMBER()over (order by TournamentMatchID) as CNo, 
+			WhiteUserID, BlackUserID, GameResultID,[Round],
+(select max([Round]) from  dbo.TournamentMatch where TournamentID =@TournamentID)as NoR
+
+FROM       dbo.TournamentMatch
+
+where      TournamentID =@TournamentID
+
+select ROW_NUMBER()over (order by teamid) as Rank, 
+sum(tournamentpoints) Rating,  
+TeamID, TeamName from (
+SELECT   EloBefore,EloAfter,TournamentPoints, 
+tournamentuser.TeamID,
+TeamName = (select teamname from team where teamid = tournamentuser.teamid)
+
+FROM         dbo.TournamentUser INNER JOIN
+                      dbo.[User] ON dbo.TournamentUser.UserID = dbo.[User].UserID
+where      TournamentID = @TournamentID ) tbl
+group by teamid, teamname
+
+--order by MatchStartDate,MatchStartTime,TournamentMatchID 
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PrintGameDataSet" targetNamespace="http://tempuri.org/PrintGameDataSet.xsd" xmlns:mstns="http://tempuri.org/PrintGameDataSet.xsd" xmlns="http://tempuri.org/PrintGameDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PrintGameDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="PrintGameDataSet" msprop:Generator_DataSetName="PrintGameDataSet" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PrintGame" msprop:Generator_UserTableName="PrintGame" msprop:Generator_RowDeletedName="PrintGameRowDeleted" msprop:Generator_RowChangedName="PrintGameRowChanged" msprop:Generator_RowClassName="PrintGameRow" msprop:Generator_RowChangingName="PrintGameRowChanging" msprop:Generator_RowEvArgName="PrintGameRowChangeEvent" msprop:Generator_RowEvHandlerName="PrintGameRowChangeEventHandler" msprop:Generator_TableClassName="PrintGameDataTable" msprop:Generator_TableVarName="tablePrintGame" msprop:Generator_RowDeletingName="PrintGameRowDeleting" msprop:Generator_TablePropName="PrintGame">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="white" msprop:Generator_UserColumnName="white" msprop:Generator_ColumnPropNameInRow="white" msprop:Generator_ColumnVarNameInTable="columnwhite" msprop:Generator_ColumnPropNameInTable="whiteColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="black" msprop:Generator_UserColumnName="black" msprop:Generator_ColumnPropNameInRow="black" msprop:Generator_ColumnVarNameInTable="columnblack" msprop:Generator_ColumnPropNameInTable="blackColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="notations" msprop:Generator_UserColumnName="notations" msprop:Generator_ColumnPropNameInRow="notations" msprop:Generator_ColumnVarNameInTable="columnnotations" msprop:Generator_ColumnPropNameInTable="notationsColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="gametype" msprop:Generator_UserColumnName="gametype" msprop:Generator_ColumnPropNameInRow="gametype" msprop:Generator_ColumnVarNameInTable="columngametype" msprop:Generator_ColumnPropNameInTable="gametypeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="date" msprop:Generator_UserColumnName="date" msprop:Generator_ColumnPropNameInRow="date" msprop:Generator_ColumnVarNameInTable="columndate" msprop:Generator_ColumnPropNameInTable="dateColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PrintDiagram" msprop:Generator_UserTableName="PrintDiagram" msprop:Generator_RowDeletedName="PrintDiagramRowDeleted" msprop:Generator_RowChangedName="PrintDiagramRowChanged" msprop:Generator_RowClassName="PrintDiagramRow" msprop:Generator_RowChangingName="PrintDiagramRowChanging" msprop:Generator_RowEvArgName="PrintDiagramRowChangeEvent" msprop:Generator_RowEvHandlerName="PrintDiagramRowChangeEventHandler" msprop:Generator_TableClassName="PrintDiagramDataTable" msprop:Generator_TableVarName="tablePrintDiagram" msprop:Generator_RowDeletingName="PrintDiagramRowDeleting" msprop:Generator_TablePropName="PrintDiagram">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LogoImage" msprop:Generator_UserColumnName="LogoImage" msprop:Generator_ColumnPropNameInRow="LogoImage" msprop:Generator_ColumnVarNameInTable="columnLogoImage" msprop:Generator_ColumnPropNameInTable="LogoImageColumn" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

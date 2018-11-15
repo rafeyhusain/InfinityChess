@@ -1,0 +1,10 @@
+﻿<UserControl x:Class="App.Model.Model.Ui.Win.Common.Controls.Notation.NotationTextView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="300" Width="300">
+    <ScrollViewer Height="Auto" Name="SV" Width="Auto">
+        <Border Background="{Binding ElementName=panel, Path=Background}" BorderBrush="Gray" BorderThickness="1" Padding="5">
+            <WrapPanel Name="wrapPanel" MouseDown="wrapPanel_MouseDown" />
+        </Border>
+    </ScrollViewer>
+</UserControl>

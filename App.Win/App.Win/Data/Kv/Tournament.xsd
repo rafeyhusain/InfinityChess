@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Tournament" targetNamespace="http://tempuri.org/Tournament.xsd" xmlns:mstns="http://tempuri.org/Tournament.xsd" xmlns="http://tempuri.org/Tournament.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Tournament" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Tournament" msprop:Generator_DataSetName="Tournament" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Kv" msprop:Generator_UserTableName="Kv" msprop:Generator_RowDeletedName="KvRowDeleted" msprop:Generator_RowChangedName="KvRowChanged" msprop:Generator_RowClassName="KvRow" msprop:Generator_RowChangingName="KvRowChanging" msprop:Generator_RowEvArgName="KvRowChangeEvent" msprop:Generator_RowEvHandlerName="KvRowChangeEventHandler" msprop:Generator_TableClassName="KvDataTable" msprop:Generator_TableVarName="tableKv" msprop:Generator_RowDeletingName="KvRowDeleting" msprop:Generator_TablePropName="Kv">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="k" msprop:Generator_UserColumnName="k" msprop:Generator_ColumnPropNameInRow="k" msprop:Generator_ColumnVarNameInTable="columnk" msprop:Generator_ColumnPropNameInTable="kColumn" type="xs:string" />
+              <xs:element name="v" msprop:Generator_UserColumnName="v" msprop:Generator_ColumnPropNameInRow="v" msprop:Generator_ColumnVarNameInTable="columnv" msprop:Generator_ColumnPropNameInTable="vColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TournamentParticipants" msprop:Generator_UserTableName="TournamentParticipants" msprop:Generator_RowDeletedName="TournamentParticipantsRowDeleted" msprop:Generator_RowChangedName="TournamentParticipantsRowChanged" msprop:Generator_RowClassName="TournamentParticipantsRow" msprop:Generator_RowChangingName="TournamentParticipantsRowChanging" msprop:Generator_RowEvArgName="TournamentParticipantsRowChangeEvent" msprop:Generator_RowEvHandlerName="TournamentParticipantsRowChangeEventHandler" msprop:Generator_TableClassName="TournamentParticipantsDataTable" msprop:Generator_TableVarName="tableTournamentParticipants" msprop:Generator_RowDeletingName="TournamentParticipantsRowDeleting" msprop:Generator_TablePropName="TournamentParticipants">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TournamentParticipantID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_UserColumnName="TournamentParticipantID" msprop:Generator_ColumnPropNameInRow="TournamentParticipantID" msprop:Generator_ColumnVarNameInTable="columnTournamentParticipantID" msprop:Generator_ColumnPropNameInTable="TournamentParticipantIDColumn" type="xs:int" />
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInTable="NameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IsEngine" msprop:Generator_UserColumnName="IsEngine" msprop:Generator_ColumnPropNameInRow="IsEngine" msprop:Generator_ColumnVarNameInTable="columnIsEngine" msprop:Generator_ColumnPropNameInTable="IsEngineColumn" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TournamentMatchs" msprop:Generator_UserTableName="TournamentMatchs" msprop:Generator_RowDeletedName="TournamentMatchsRowDeleted" msprop:Generator_RowChangedName="TournamentMatchsRowChanged" msprop:Generator_RowClassName="TournamentMatchsRow" msprop:Generator_RowChangingName="TournamentMatchsRowChanging" msprop:Generator_RowEvArgName="TournamentMatchsRowChangeEvent" msprop:Generator_RowEvHandlerName="TournamentMatchsRowChangeEventHandler" msprop:Generator_TableClassName="TournamentMatchsDataTable" msprop:Generator_TableVarName="tableTournamentMatchs" msprop:Generator_RowDeletingName="TournamentMatchsRowDeleting" msprop:Generator_TablePropName="TournamentMatchs">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TournamentMatchID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="1" msprop:Generator_UserColumnName="TournamentMatchID" msprop:Generator_ColumnPropNameInRow="TournamentMatchID" msprop:Generator_ColumnVarNameInTable="columnTournamentMatchID" msprop:Generator_ColumnPropNameInTable="TournamentMatchIDColumn" type="xs:int" />
+              <xs:element name="Participant1" msprop:Generator_UserColumnName="Participant1" msprop:Generator_ColumnPropNameInRow="Participant1" msprop:Generator_ColumnVarNameInTable="columnParticipant1" msprop:Generator_ColumnPropNameInTable="Participant1Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Participant2" msprop:Generator_UserColumnName="Participant2" msprop:Generator_ColumnPropNameInRow="Participant2" msprop:Generator_ColumnVarNameInTable="columnParticipant2" msprop:Generator_ColumnPropNameInTable="Participant2Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Result" msprop:Generator_UserColumnName="Result" msprop:Generator_ColumnPropNameInRow="Result" msprop:Generator_ColumnVarNameInTable="columnResult" msprop:Generator_ColumnPropNameInTable="ResultColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IsFinished" msprop:Generator_UserColumnName="IsFinished" msprop:Generator_ColumnVarNameInTable="columnIsFinished" msprop:Generator_ColumnPropNameInRow="IsFinished" msprop:Generator_ColumnPropNameInTable="IsFinishedColumn" type="xs:boolean" default="false" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="TournamentParticipantKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TournamentParticipants" />
+      <xs:field xpath="mstns:TournamentParticipantID" />
+    </xs:unique>
+    <xs:unique name="TournamentMatchKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:TournamentMatchs" />
+      <xs:field xpath="mstns:TournamentMatchID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

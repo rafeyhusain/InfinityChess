@@ -1,0 +1,48 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="InfinityChess" GeneratedClassName="ThemeSetting">
+  <Profiles />
+  <Settings>
+    <Setting Name="Font" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Arial, 9pt</Value>
+    </Setting>
+    <Setting Name="BackColorControl" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">248, 217, 188</Value>
+    </Setting>
+    <Setting Name="BackColorButton" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Gray</Value>
+    </Setting>
+    <Setting Name="BackColorTextbox" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Gray</Value>
+    </Setting>
+    <Setting Name="BorderColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="UCDigitalClockColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">128, 128, 255</Value>
+    </Setting>
+    <Setting Name="UCAnalogClockColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">128, 128, 255</Value>
+    </Setting>
+    <Setting Name="BackColorForm" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">112, 133, 181</Value>
+    </Setting>
+    <Setting Name="ChessBoardColor1" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">112, 133, 181</Value>
+    </Setting>
+    <Setting Name="ChessBoardColor2" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">240, 240, 240</Value>
+    </Setting>
+    <Setting Name="ForeColorControl" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="ForeColorButton" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="ForeColorForm" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="ForeColorTextbox" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
